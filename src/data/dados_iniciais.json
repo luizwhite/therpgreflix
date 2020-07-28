@@ -1,0 +1,186 @@
+{
+  "categorias": [
+    {
+      "titulo": "MMORPG",
+      "link": "https://www.mmorpg.com/",
+      "cor": "#e5ab29",
+      "link_extra": {
+        "text": "MMORPG Reviews",
+        "url": "https://www.mmorpg.com/reviews"
+      },
+      "videos": [
+        {
+          "titulo": "It's a Beautiful World #AoC",
+          "url": "https://www.youtube.com/watch?v=C42knfjbLgw"
+        },
+        {
+          "titulo": "Genuinely The Most Exciting Upcoming MMORPG - Ashes Of Creation",
+          "url": "https://www.youtube.com/watch?v=1s82xJnx1EY"
+        },
+        {
+          "titulo": "New World 2021 MMORPG... Delayed",
+          "url": "https://www.youtube.com/watch?v=L9b_RpQZB1U&t=20s"
+        },
+        {
+          "titulo": "A INVASÃO Anime nos MMORPGs!",
+          "url": "https://www.youtube.com/watch?v=U1DuDhku3jg"
+        },
+        {
+          "titulo": "A PROCURA ACABOU? Ashes of Creation, O MMORPG Que Faltava!",
+          "url": "https://www.youtube.com/watch?v=iYiEQ5pI0d0"
+        },
+        {
+          "titulo": "Chegou o BETA! WoW Shadowlands, Do 50 ao 60!",
+          "url": "https://www.youtube.com/watch?v=PUpDyvQNBhU"
+        },
+        {
+          "titulo": "Dungeons & Dragons Online First Impressions \"Is It Worth Playing?\"",
+          "url": "https://www.youtube.com/watch?v=amz86lxRwlg"
+        },
+        {
+          "titulo": "10 Free to Play MMORPGs You Should Try In August, 2020!",
+          "url": "https://www.youtube.com/watch?v=pcIQj_0qYaE&t=35s"
+        }
+      ]
+    },
+    {
+      "titulo": "ARPG",
+      "cor": "#571305",
+      "link_extra": {
+        "text": "Action RPG Reviews",
+        "url": "https://www.pcgamer.com/best-action-rpg-pc/"
+      },
+      "videos": [
+        {
+          "titulo": "Path of Exile 2 Gameplay Preview",
+          "url": "https://www.youtube.com/watch?v=V2VRRSVgCL4"
+        },
+        {
+          "titulo": "Diablo 4 Gameplay Demo: Blizzcon 2019",
+          "url": "https://www.youtube.com/watch?v=6ZtmNAMxwMM"
+        },
+        {
+          "titulo": "Diablo 4 e Path of Exile 2! O FUTURO dos ARPGs!",
+          "url": "https://www.youtube.com/watch?v=DDYlkViN4es"
+        },
+        {
+          "titulo": "Grim Dawn: Between Diablo 3 & Path of Exile - Overview and Review",
+          "url": "https://www.youtube.com/watch?v=bJWQCDLG5uw"
+        },
+        {
+          "titulo": "Pagan Online First Impressions \"Is It Worth Playing?\"",
+          "url": "https://www.youtube.com/watch?v=d7po_DWJotA"
+        }
+      ]
+    },
+    {
+      "titulo": "JRPG",
+      "cor": "#9cd33b",
+      "link_extra": {
+        "text": "JRPG Reviews - DarkStation",
+        "url": "https://www.darkstation.com/reviews/tag/JRPG"
+      },
+      "videos": [
+        {
+          "titulo": "Teste de Turing",
+          "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
+        },
+        {
+          "titulo": "O que é Data Science?",
+          "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+        },
+        {
+          "titulo": "Melhor forma de aprender Python",
+          "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
+        },
+        {
+          "titulo": "Como ingressar no mercado de Data Science?",
+          "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
+        }
+      ]
+    },
+
+    {
+      "titulo": "Tactical RPG",
+      "cor": "#6b5be2",
+      "link_extra": {
+        "text": "The Best Tactical & Strategy RPGs | Strategy Gamer",
+        "url": "https://www.strategygamer.com/articles/best-trpg/"
+      },
+      "videos": [
+        {
+          "titulo": "Como estudar melhor?",
+          "url": "https://www.youtube.com/watch?v=Is6c9KSGCbk&feature=youtu.be"
+        },
+        {
+          "titulo": "Faculdade",
+          "url": "https://www.youtube.com/watch?v=jw06H8esyzQ&feature=youtu.be"
+        },
+        {
+          "titulo": "Frameworks",
+          "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+        },
+        {
+          "titulo": "A mágica do Aprendizado",
+          "url": "https://www.youtube.com/watch?v=oTEXzpfEpPY"
+        },
+        {
+          "titulo": "Como aprender a programar?",
+          "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
+        }
+      ]
+    },
+    {
+      "titulo": "Filmes",
+      "cor": "orange",
+      "videos": [
+        {
+          "titulo": "Interestellar",
+          "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+        },
+        {
+          "titulo": "Gattaca",
+          "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
+        },
+        {
+          "titulo": "A Chegada",
+          "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
+        },
+        {
+          "titulo": "Feitiço do Tempo",
+          "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+        }
+      ]
+    },
+    {
+      "titulo": "Games",
+      "cor": "red",
+      "link_extra": {
+        "text": "Formação de Jogos na Alura",
+        "url": "https://www.alura.com.br/formacao-jogos-unity"
+      },
+      "videos": [
+        {
+          "titulo": "Final Fantasy 7",
+          "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
+        },
+        {
+          "titulo": "Assassins Creed Valhalla",
+          "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
+        },
+        {
+          "titulo": "God of War 4",
+          "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE"
+        },
+        {
+          "titulo": "Resident Evil 8",
+          "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
+        },
+        {
+          "titulo": "Pokémon Let's Go Pikachu/Eevee",
+          "url": "https://www.youtube.com/watch?v=L56q_k2ydrs"
+        }
+      ]
+    }
+  ]
+}

@@ -1,25 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Menu from './components/Menu';
+import styled from 'styled-components';
+import dadosIniciais from './data/dados_iniciais.json';
+import BannerMain from './components/BannerMain';
+import Carousel from './components/Carousel';
+import Footer from './components/Footer';
+
+const AppWrapper = styled.div`
+  background: var(--grayDark);
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrapper>
+      <Menu />
+
+      <BannerMain videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
+        url={dadosIniciais.categorias[0].videos[0].url}
+        videoDescription={"In-Game environment surrounding the metropolis from the \"Art of War\" trailer."}
+      />
+
+      <Carousel ignoreFirstVideo
+        category={dadosIniciais.categorias[0]}
+      />
+
+      <Carousel
+        category={dadosIniciais.categorias[1]}
+      />
+
+      <Carousel
+        category={dadosIniciais.categorias[2]}
+      />
+
+      <Carousel
+        category={dadosIniciais.categorias[3]}
+      />
+
+      <Carousel
+        category={dadosIniciais.categorias[4]}
+      />
+
+      <Carousel
+        category={dadosIniciais.categorias[5]}
+      />
+
+      <Footer />
+
+    </AppWrapper>
   );
 }
 
