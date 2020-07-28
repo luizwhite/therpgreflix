@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
 export const ContentAreaContainer = styled.section`
-  margin-left: 5%;
-  margin-right: 5%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+
   position: relative;
   z-index: 10;
+
   @media (max-width: 800px) {
     padding-top: 100px;
     flex-direction: column;
@@ -16,9 +18,14 @@ export const ContentAreaContainer = styled.section`
 `;
 
 ContentAreaContainer.Item = styled.div`
-  width: 50%;
   display: inline-block;
+  width: 50%;
   margin-bottom: 50px;
+
+  &:first-child {
+    margin-right: 5px;
+  }
+
   @media (max-width: 800px) {
     width: 100%;
   }
@@ -33,7 +40,7 @@ ContentAreaContainer.Category = styled.h1`
   display: flex;
   align-items: center;
   text-align: center;
-  display: inline-block; 
+  display: inline-block;
   padding: 25px;
   line-height: 1;
   border-radius: 4px;
@@ -52,12 +59,13 @@ ContentAreaContainer.Description = styled.p`
 `;
 
 ContentAreaContainer.Title = styled.h2`
+  margin-top: 0;
+  margin-bottom: 32px;
+
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
   line-height: 1;
-  margin-top: 0;
-  margin-bottom: 32px;
 
   @media (max-width: 800px) {
     font-size: 32px;
@@ -68,10 +76,14 @@ ContentAreaContainer.Title = styled.h2`
 export const BannerMainContainer = styled.section`
   height: 80vh;
   position: relative;
-  color: #fff;
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`}; 
+
+  /* Entender */
+  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: cover;
   background-position: center;
+
+  color: #fff;
+
   @media (max-width: 800px) {
     height: auto;
     min-height: 50vh;
@@ -101,24 +113,33 @@ export const BannerMainContainer = styled.section`
 `;
 
 export const WatchButton = styled.button`
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  cursor: pointer;
   padding: 16px 24px;
-  font-style: normal;
-  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  /* box-sizing: border-box; */
+
   font-size: 16px;
-  outline: none;
-  border-radius: 5px;
+  /* font-style: normal; */
+  font-weight: bold;
   text-decoration: none;
-  display: inline-block;
-  border: 1px solid transparent;
   color: var(--black);
+
   background: var(--white);
+
+  border-radius: 4px;
+  border: 0;
   border-color: var(--black);
+  /* border: 1px solid transparent; */
+
+  cursor: pointer;
+  outline: none;
   transition: opacity .3s;
   display: none;
-  margin: 0 auto;
+
+  &:focus {
+    opacity: .5;
+  }
+
   @media (max-width: 800px) {
     display: block;
   }

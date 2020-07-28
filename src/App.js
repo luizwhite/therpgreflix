@@ -7,7 +7,12 @@ import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
 const AppWrapper = styled.div`
+  padding-top: 94px;
   background: var(--grayDark);
+
+  @media (max-width: 800px) {
+    padding-top: var(--MenuPaddingTopMobile);
+  }
 `;
 
 function App() {

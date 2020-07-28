@@ -2,6 +2,8 @@ import React from 'react';
 import { FooterBase } from './styles';
 
 function Footer() {
+  
+  /*checklater*/
   return (
     <FooterBase>
       <a href="https://www.alura.com.br/">
