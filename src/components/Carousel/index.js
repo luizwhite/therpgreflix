@@ -12,7 +12,7 @@ function VideoCardGroup({
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
 
-  /*checklater - check also how to slidermobile*/
+  /*checklater - check also how to slidermobile & color arrows*/
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
@@ -27,7 +27,7 @@ function VideoCardGroup({
           }
         </>
       )}
-      <Slider>
+      <Slider arrowColor={categoryColor}>
         {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;

@@ -20,11 +20,31 @@ const Container = styled.ul`
     }
   }
 
+  .slick-slide a {
+    transition: width .3s, opacity .3s;
+  }
+  .slick-slide a:hover {
+    width: 350px;
+    opacity: .5;
+  }
+
   .slick-prev {
-    left: 0;
+    left: -40px;
   }
   .slick-next {
     right: 16px;
+  }
+  .slick-next::before, .slick-prev::before {
+	color: ${({ arrowColor }) => arrowColor};
+  }
+
+  @media (max-width: 800px) {
+    .slick-prev {
+      left: 5px;
+    }
+    .slick-next {
+      right: 5px;
+    }
   }
 `;
 
@@ -39,20 +59,19 @@ export const SliderItem = styled.li`
 `;
 
 
-const Slider = ({ children }) => (
-  <Container>
+const Slider = ({ arrowColor, children }) => (
+  <Container arrowColor={arrowColor}>
     <SlickSlider {...{
       dots: false,
-      /*infinite: false,
-      speed: 300,*/
       centerMode: false,
       variableWidth: true,
       adaptiveHeight: true,
+      /*infinite: false,
+      speed: 300,*/
 
       speed: 800,
       infinite: true,
       slidesToScroll: 1,
-      autoplay: true,
       autoplaySpeed: 3000,
     }}
     >
@@ -61,20 +80,20 @@ const Slider = ({ children }) => (
   </Container>
 );
 
-export const SliderMobile = ({ children }) => (
-  <Container>
-    <SlickSlider {...{
-      dots: false,
-      infinite: false,
-      speed: 300,
-      centerMode: false,
-      variableWidth: true,
-      adaptiveHeight: true,
-    }}
-    >
-      {children}
-    </SlickSlider>
-  </Container>
-);
+// export const SliderMobile = ({ children }) => (
+//   <Container>
+//     <SlickSlider {...{
+//       dots: false,
+//       infinite: false,
+//       speed: 300,
+//       centerMode: false,
+//       variableWidth: true,
+//       adaptiveHeight: true,
+//     }}
+//     >
+//       {children}
+//     </SlickSlider>
+//   </Container>
+// );
 
 export default Slider;
