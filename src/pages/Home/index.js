@@ -1,25 +1,12 @@
 import React from 'react';
-import Menu from './components/Menu';
-import styled from 'styled-components';
-import dadosIniciais from './data/dados_iniciais.json';
-import BannerMain from './components/BannerMain';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
+import dadosIniciais from '../../data/dados_iniciais.json';
+import BannerMain from '../../components/BannerMain';
+import Carousel from '../../components/Carousel';
+import PageHome from './style.js';
 
-const AppWrapper = styled.div`
-  padding-top: 94px;
-  background: var(--grayDark);
-
-  @media (max-width: 800px) {
-    padding-top: var(--MenuPaddingTopMobile);
-  }
-`;
-
-function App() {
+function Home() {
   return (
-    <AppWrapper>
-      <Menu />
-
+    <PageHome>
       <BannerMain videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
         videoDescription={"In-Game environment surrounding the metropolis from the \"Art of War\" trailer."}
@@ -48,11 +35,8 @@ function App() {
       <Carousel
         category={dadosIniciais.categorias[5]}
       />
-
-      <Footer />
-
-    </AppWrapper>
+    </PageHome>
   );
 }
 
-export default App;
+export default Home;

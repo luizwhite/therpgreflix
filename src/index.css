@@ -20,8 +20,24 @@ html,
 body {
   margin: 0;
   padding: 0;
+  /*overflow: scroll;*/
 }
 
 a {
   color: inherit;
+}
+
+#root {
+  --bodyPaddingTop: 94px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--bodyPaddingTop));
+  padding-top: var(--bodyPaddingTop);
+  background: var(--grayDark);
+}
+
+@media (max-width: 800px) {
+  #root {
+    padding-top: var(--MenuPaddingTopMobile);
+  }
 }
