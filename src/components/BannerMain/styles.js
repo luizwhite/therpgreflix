@@ -24,6 +24,10 @@ ContentAreaContainer.Item = styled.div`
 
   &:first-child {
     margin-right: 5px;
+    text-shadow: 2px 2px 4px rgb(200,200,200,.7);
+  }
+  &:last-child {
+    box-shadow: 0 0 20px 6px rgb(115, 115, 115,.7);
   }
 
   @media (max-width: 800px) {

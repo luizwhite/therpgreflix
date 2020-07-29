@@ -31,7 +31,7 @@ a {
   --bodyPaddingTop: 94px;
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--bodyPaddingTop));
+  min-height: 100vh;
   padding-top: var(--bodyPaddingTop);
   background: var(--grayDark);
 }

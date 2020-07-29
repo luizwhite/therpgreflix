@@ -10,14 +10,19 @@ color: var(--white);
 export const Title = styled.h3`
   display: inline-block;
   padding: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 
   background: red;
-  border-radius: 4px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  box-shadow: 0 0 20px 1px rgb(115, 115, 115,.7);
+
 
   /* font-style: normal; */
   font-size: 35px;
-  font-weight: normal;
+  font-weight: bold;
+  font-family: 'Josefin Sans', sans-serif;
   line-height: 1;
 
   @media (max-width: 800px) {
