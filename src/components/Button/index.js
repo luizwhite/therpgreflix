@@ -4,21 +4,24 @@ const Button = styled.button`
   padding: 16px 24px;
   box-sizing: border-box;
 
-  border: 1px solid var(--white);
+  background-color: var(--primary-black-2);
+
+  border: 1px solid #d9d9d9;
   border-radius: 4px;
 
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   text-decoration: none;
-  color: var(--white);
+  color: #d9d9d9;
+  opacity: .5;
 
   cursor: pointer;
   outline: none;
   transition: opacity .3s;
 
   &:hover, &:focus {
-    opacity: .5;
+    opacity: 1;
   }
 
   @media (max-width: 800px) {

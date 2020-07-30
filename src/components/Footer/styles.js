@@ -12,7 +12,7 @@ export const FooterBase = styled.footer`
   height: 120px;
   padding: 25px 16px 0 16px;
 
-  background-color: var(--black);
+  background-color: var(--primary-black);
   border-top: 2px solid var(--primary);
 
   font-size: 12px;

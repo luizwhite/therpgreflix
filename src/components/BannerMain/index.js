@@ -14,9 +14,7 @@ export default function BannerMain({
   videoTitle,
   videoDescription,
   url,
-})
-
-{
+}) {
   const youTubeID = getYouTubeId(url);
   const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
 
@@ -38,7 +36,7 @@ export default function BannerMain({
             youtubeID={youTubeID}
           />
           <WatchButton>
-            Assistir
+            <a style={{textDecoration: 'none'}} href={url}>Assistir</a>
           </WatchButton>
         </ContentAreaContainer.Item>
       </ContentAreaContainer>

@@ -4,8 +4,11 @@
 }
 
 :root {
-  --primary: #2A7AE4;
+  /*--primary: #2A7AE4;*/
+  --primary: #db7d1f;
   --black: #000000;
+  --primary-black: #160d03;
+  --primary-black-2: #2d1b06;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
   --grayMedium: #e5e5e5;
@@ -14,6 +17,11 @@
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
   --MenuPaddingTopMobile: 50px;
+  --videoCard-container-width: 280px;
+  --videoCard-container-height: calc(calc(var(--videoCard-container-width) / 16) * 10);
+  --videoCard-container-focus-width: 330px;
+  --videoCard-container-focus-height: calc(calc(var(--videoCard-container-focus-width) / 16) * 9);
+
 }
 
 html,

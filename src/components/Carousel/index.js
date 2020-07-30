@@ -1,7 +1,7 @@
 import React from 'react';
-import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem/*, SliderMobile*/ } from './components/Slider';
+import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 
 function VideoCardGroup({
   ignoreFirstVideo,
@@ -12,7 +12,7 @@ function VideoCardGroup({
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
 
-  /*checklater - check also how to slidermobile & color arrows*/
+  /*checklater*/
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
