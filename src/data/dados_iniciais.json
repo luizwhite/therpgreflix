@@ -4,6 +4,7 @@
       "titulo": "MMORPG",
       "link": "https://www.mmorpg.com/",
       "cor": "#e5ab29",
+      "corRGB": "rgb(229, 171, 41)",
       "link_extra": {
         "text": "MMORPG Reviews",
         "url": "https://www.mmorpg.com/reviews"
@@ -46,6 +47,7 @@
     {
       "titulo": "ARPG",
       "cor": "#571305",
+      "corRGB": "rgb(87, 19, 5)",
       "link_extra": {
         "text": "Action RPG Reviews",
         "url": "https://www.pcgamer.com/best-action-rpg-pc/"
@@ -76,6 +78,7 @@
     {
       "titulo": "JRPG",
       "cor": "#9cd33b",
+      "corRGB": "rgb(156, 211, 59)",
       "link_extra": {
         "text": "JRPG Reviews - DarkStation",
         "url": "https://www.darkstation.com/reviews/tag/JRPG"
@@ -103,6 +106,7 @@
     {
       "titulo": "Tactical RPG",
       "cor": "#6b5be2",
+      "corRGB": "rgb(107, 91, 226)",
       "link_extra": {
         "text": "The Best Tactical & Strategy RPGs | Strategy Gamer",
         "url": "https://www.strategygamer.com/articles/best-trpg/"
@@ -133,6 +137,7 @@
     {
       "titulo": "Filmes",
       "cor": "orange",
+      "corRGB": "rgb(255, 165, 0)",
       "videos": [
         {
           "titulo": "Interestellar",
@@ -155,6 +160,7 @@
     {
       "titulo": "Games",
       "cor": "red",
+      "corRGB": "rgb(255, 0, 0)",
       "link_extra": {
         "text": "Formação de Jogos na Alura",
         "url": "https://www.alura.com.br/formacao-jogos-unity"

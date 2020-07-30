@@ -13,6 +13,7 @@ export const Title = styled.h3`
   margin-bottom: 8px;
 
   background: red;
+  border: 0;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
