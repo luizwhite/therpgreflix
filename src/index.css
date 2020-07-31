@@ -18,10 +18,14 @@
   --frontEnd: #6bd1ff;
   --backEnd: #00c86f;
   --MenuPaddingTopMobile: 50px;
-  --videoCard-container-width: 280px;
-  --videoCard-container-height: calc(calc(var(--videoCard-container-width) / 16) * 10);
-  --videoCard-container-focus-width: 330px;
-  --videoCard-container-focus-height: calc(calc(var(--videoCard-container-focus-width) / 16) * 9);
+  --videoCard-container-width: 300px;
+  --videoCard-container-height: calc(calc(var(--videoCard-container-width) / 16) * 9);
+  --videoCard-container-width-mob: 200px;
+  --videoCard-container-height-mob: calc(calc(var(--videoCard-container-width-mob) / 16) * 9);
+  --videoCard-focus-scale: 1.3;
+  --videoCard-focus-scale-mob: 1.2;
+  /* --videoCard-container-focus-width: 364px;
+  --videoCard-container-focus-height: calc(calc(var(--videoCard-container-focus-width) / 16) * 9); */
 }
 
 html,

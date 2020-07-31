@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  PlaceholderSpan, Label, Input, Color, FormFieldWrapper,
+  PlaceholderSpan, Label, Input, ColorWrapper, Color, FormFieldWrapper,
 } from './style';
 
 function FormField({
@@ -19,7 +19,10 @@ function FormField({
         {/* {label} */}
         <br />
         {isColorInput ? (
-          <Color id={fieldId} name={name} type={type} value={value} onChange={onChange} />
+          <ColorWrapper>
+            <span>Cor: </span>
+            <Color id={fieldId} name={name} type={type} value={value} onChange={onChange} />
+          </ColorWrapper>
         ) : (
           <div style={{ position: 'relative' }}>
             <Input
@@ -45,7 +48,6 @@ FormField.defaultProps = {
 };
 
 FormField.propTypes = {
-  label: PropTypes.string.isRequired,
   type: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,

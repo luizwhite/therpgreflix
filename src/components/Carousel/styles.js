@@ -14,6 +14,7 @@ export const VideoCardGroupContainer = styled.section`
 export const Title = styled.h3`
   display: inline-block;
   padding: 15px 15px;
+  margin-top: .5rem;
   margin-bottom: 8px;
 
   background: red;

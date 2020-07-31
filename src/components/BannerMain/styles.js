@@ -94,7 +94,7 @@ export const WatchButton = styled.button`
 `;
 
 export const BannerMainContainer = styled.section`
-  height: 80vh;
+  height: calc(100vh - var(--bodyPaddingTop));
   position: relative;
 
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
@@ -104,8 +104,7 @@ export const BannerMainContainer = styled.section`
   color: #fff;
 
   @media (max-width: 800px) {
-    height: auto;
-    min-height: 50vh;
+    height: calc(100vh - var(----MenuPaddingTopMobile));
   }
 
   &:after,

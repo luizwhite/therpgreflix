@@ -4,7 +4,7 @@ import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
 const Container = styled.ul`
-  height: calc(var(--videoCard-container-focus-height) + 5px);
+  height: calc(calc(var(--videoCard-container-height) * var(--videoCard-focus-scale)) * 1.05);
   padding: 0;
   margin: 0;
 
@@ -47,7 +47,40 @@ const Container = styled.ul`
     right: 16px;
   }
 
+  &:not(.slick-current) a:hover,
+  &:not(.slick-current) a:focus {
+    /* width: var(--videoCard-container-focus-width);
+    height: var(--videoCard-container-focus-height); */
+    transform: scale(var(--videoCard-focus-scale));
+    z-index: 100;
+    border: 0;
+    opacity: 1;
+  }
+
+  .slick-current a:hover,
+  .slick-current a:focus {
+    transform: scale(var(--videoCard-focus-scale));
+    z-index: 100;
+    border: 0;
+    opacity: 1;
+
+    @media not all and (max-width: 1200px) {
+      transform: scale(var(--videoCard-focus-scale)) translateX(12%);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .slick-current a {
+      transform: scale(var(--videoCard-focus-scale-mob));
+      z-index: 100;
+      border: 0;
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 800px) {
+    height: calc(calc(var(--videoCard-container-height-mob) * var(--videoCard-focus-scale-mob)) * 1.02);
+
     .slick-prev {
       left: 5px;
     }
@@ -75,7 +108,7 @@ const Slider = ({ arrowColor, children }) => (
         autoplay: false,
         fade: false,
         slidesToShow: 4,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         arrows: true,
         centerMode: false,
         speed: 800,
@@ -88,16 +121,18 @@ const Slider = ({ arrowColor, children }) => (
           {
             breakpoint: 1200,
             settings: {
+              centerMode: true,
               slidesToShow: 3,
-              slidesToScroll: 1,
+              slidesToScroll: 2,
+              infinite: true,
             },
           },
           {
             breakpoint: 800,
             settings: {
               centerMode: true,
-              slidesToShow: 2,
-              slidesToScroll: 1,
+              slidesToShow: 3,
+              slidesToScroll: 2,
               infinite: true,
             },
           },

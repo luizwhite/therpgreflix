@@ -11,22 +11,24 @@ export const PlaceholderSpan = styled.span`
   top: calc(5px + 1px);
   left: 3px;
 
-  font-size: 16px;
+  font-size: 20px;
+  text-shadow: none;
   color: var(--grayLight);
 
   opacity: 0.3;
-  transition: 0.4s ease-in-out;
+  transition: font 0.4s ease-in-out, transform 0.4s, opacity 0.4s;
 
   &:focus,
   &:hover {
-    font-size: 12px;
+    /* font-size: 12px; */
     font-style: italic;
+    transform: scale(.7) translateX(-20%);
     opacity: 0.6;
   }
 `;
 
 export const Label = styled.label`
-  text-shadow: 1px 1px 2px rgb(230, 230, 230, 0.7);
+  text-shadow: 1px 1px rgb(230, 230, 230, 0.9);
 `;
 
 export const Input = styled.input`
@@ -41,7 +43,7 @@ export const Input = styled.input`
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
   border-radius: 6px;
-  box-shadow: 0 0 2px 2px rgb(115, 115, 115, 0.7);
+  /* box-shadow: 0 0 2px 2px rgb(115, 115, 115, 0.7); */
 
   color: var(--grayLight);
 
@@ -55,8 +57,10 @@ export const Input = styled.input`
 
   &:focus + span,
   &:hover + span {
-    font-size: 12px;
+    /* font-size: 12px; */
     font-style: italic;
+
+    transform: scale(.7) translateX(-20%);
     opacity: 0.6;
   }
 
@@ -66,9 +70,10 @@ export const Input = styled.input`
       hasValue
       && css`
         + ${PlaceholderSpan} {
-          /*transform: scale(.6) translateY(-10px);*/
-          font-size: 12px;
+          /*transform: scale(.6) translateX(-20%);*/
+          /* font-size: 12px; */
           font-style: italic;
+          transform: scale(.7) translateX(-20%);
           opacity: 0.6;
         }
       `
@@ -76,12 +81,27 @@ export const Input = styled.input`
   }}
 `;
 
+export const ColorWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  text-shadow: none;
+  padding: 1rem;
+
+  span {
+    margin-right: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    span {
+      margin-right: .5rem;
+    }
+  }
+`;
+
 export const Color = styled.input`
-  height: 4rem;
-  width: 4rem;
-  padding: 10px;
-  border-radius: 4px;
+  width: 20vw;
+  padding: 0;
   border: 0;
-  box-shadow: 0 0 2px 1px rgb(115, 115, 115, 0.3);
-  background-color: #484d51;
+  outline: none;
+  /* box-shadow: 0 0 2px 1px rgb(115, 115, 115, 0.3); */
 `;

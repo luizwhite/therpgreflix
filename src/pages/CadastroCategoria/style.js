@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { FormFieldWrapper } from '../../components/FormField/style';
 
 export const ButtonForm = styled.button`
   width: 16rem;
-  height: 4rem;
+  height: 100%;
   padding: 0.5rem;
   background-color: var(--primary-black-2);
 
@@ -40,17 +41,35 @@ export const Form = styled.form`
   margin-bottom: 2rem;
 `;
 
+export const HrBreak = styled.hr`
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-color: var(--primary);
+  margin-top: 2rem;
+`;
+
 export const BottomContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  height: 60px;
 
   label {
-    position: relative;
+    display: flex;
   }
-  input[type='color'] {
-    position: absolute;
-    top: 0;
+
+  > ${FormFieldWrapper} {
+    height: 100%;
+    background-color: #484d51;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-bottom: 4px solid transparent;
+    display: flex;
+  }
+
+  > ${FormFieldWrapper}:hover {
+    border-bottom-color: var(--primary);
   }
 `;
 

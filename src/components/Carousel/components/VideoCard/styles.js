@@ -6,7 +6,7 @@ const VideoCardContainer = styled.a`
   height: var(--videoCard-container-height);
   padding: 16px;
 
-  /* position: relative; */
+  position: relative;
 
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
@@ -14,6 +14,7 @@ const VideoCardContainer = styled.a`
 
   border: 2px solid;
   border-radius: 10px;
+  border-color: ${({ categoryColor }) => categoryColor};
 
   text-decoration: none;
   color: white;
@@ -21,17 +22,15 @@ const VideoCardContainer = styled.a`
   opacity: 0.6;
   overflow: hidden;
   cursor: pointer;
-  transition: opacity 0.4s, width 0.4s, height 0.4s;
-
-  &:hover,
-  &:focus {
-    width: var(--videoCard-container-focus-width);
-    height: var(--videoCard-container-focus-height);
-    opacity: 1;
-  }
+  transition: width 0.4s, height 0.4s, border-color 0.4s, transform 0.4s;
 
   &:not(:first-child) {
     margin-left: 20px;
+  }
+
+  @media (max-width: 800px) {
+    width: var(--videoCard-container-width-mob);
+    height: var(--videoCard-container-height-mob);
   }
 `;
 

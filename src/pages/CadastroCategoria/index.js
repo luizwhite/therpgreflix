@@ -3,20 +3,28 @@ import React, { useState, useEffect } from 'react';
 import PageDefault from '../../components/PageDefault';
 import FormField from '../../components/FormField';
 import {
-  TitleH1, Container, Form, BottomContainer, ButtonForm,
+  TitleH1, Container, Form, HrBreak, BottomContainer, ButtonForm,
 } from './style';
 
 function CadastroCategoria() {
   const [categorias, setCategorias] = useState([
     {
-      nome: 'Teste',
+      titulo: 'TESTE',
       descricao: 'Descrição-Teste',
+      link_extra: {
+        text: 'Descrição-Teste',
+        url: '',
+      },
       cor: '#333',
     },
   ]);
   const valoresIniciais = {
-    nome: '',
+    titulo: '',
     descricao: '',
+    link_extra: {
+      text: '',
+      url: '',
+    },
     cor: '#642',
   };
   const [values, setValues] = useState(valoresIniciais);
@@ -51,7 +59,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL = 'http://localhost:8080/categorias';
+    const URL = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://therpgreflix.herokuapp.com/categorias';
     // setCategorias([...categorias]);
     fetch(URL)
       .then((response) => response.json())
@@ -63,7 +73,7 @@ function CadastroCategoria() {
   // setTimeout(() => {
   //     {
   //       id: 1,
-  //       nome: 'Front-End',
+  //       titulo: 'Front-End',
   //       descricao: 'Uma categoria bacanadussa',
   //       cor: '#6bd1ff',
   //     },
@@ -72,16 +82,16 @@ function CadastroCategoria() {
   return (
     <PageDefault>
       <TitleH1>
-        Cadastro de Categoria:
-        {values.nome}
+        Cadastro de Categoria:&nbsp;
+        {values.titulo}
       </TitleH1>
 
       <Container>
         <Form onSubmit={handleSubmit}>
           <FormField
             label="Nome da Categoria: "
-            name="nome"
-            value={values.nome}
+            name="titulo"
+            value={values.titulo}
             type="text"
             placeholder="Nomeie a nova categoria"
             onChange={handleChange}
@@ -108,17 +118,35 @@ function CadastroCategoria() {
             />
             <ButtonForm>Cadastrar Categoria</ButtonForm>
           </BottomContainer>
+          <HrBreak />
         </Form>
+        <TitleH1 style={{ marginTop: '1rem', marginBottom: '2rem' }}>
+          Categorias Cadastradas:&nbsp;
+          {values.titulo}
+        </TitleH1>
         <ul
           style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
             margin: '0 auto',
-            width: '40%',
+            width: '80%',
+            listStyleType: 'none',
+            padding: '1rem',
+            borderRadius: '4px',
+            backgroundColor: '#484d51',
           }}
         >
           {categorias.map((categoria, index) => (
             <li
               style={{
-                marginBottom: '1rem',
+                width: '100%',
+                padding: '.5rem',
+                marginBottom: '4px',
+                borderRadius: '4px',
+                border: '1px solid',
+                backgroundColor: '#6c737a',
+                textShadow: '1px 1px black',
               }}
               key={`${categoria}:${index}`}
             >
@@ -130,22 +158,21 @@ function CadastroCategoria() {
               >
                 <span
                   style={{
-                    width: '50%',
+                    width: '20%',
                     overflow: 'auto',
                     wordWrap: 'break-word',
                     fontWeight: 'bold',
                     color: `${categoria.cor}`,
                   }}
                 >
-                  {categoria.nome}
+                  {categoria.titulo}
                 </span>
                 <span
                   style={{
-                    width: '50%',
                     overflow: 'auto',
                     wordWrap: 'break-word',
                     color: `${categoria.cor}`,
-                    fontSize: '10px',
+                    fontSize: '12px',
                   }}
                 >
                   {categoria.descricao}
