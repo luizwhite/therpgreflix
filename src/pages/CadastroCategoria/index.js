@@ -45,6 +45,11 @@ function CadastroCategoria() {
     setValue(e.target.getAttribute('name'), e.target.value);
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    setCategorias([...categorias, values]);
+  }
+
   return (
     <PageDefault>
       <TitleH1>
@@ -53,17 +58,11 @@ function CadastroCategoria() {
       </TitleH1>
 
       <Container>
-        <Form
-          onSubmit={function handleSubmit(e) {
-            e.preventDefault();
-            setCategorias([...categorias, values]);
-          }}
-        >
+        <Form onSubmit={handleSubmit}>
           <FormField
             label="Nome da Categoria: "
             name="nome"
             value={values.nome}
-            inputType="input"
             type="text"
             placeholder="Nomeie a nova categoria"
             onChange={handleChange}
@@ -72,27 +71,28 @@ function CadastroCategoria() {
           <FormField
             label="Descrição: "
             name="descricao"
+            type="textarea"
             value={values.descricao}
-            inputType="textarea"
             placeholder="Descreva sobre sua categoria"
             onChange={handleChange}
           />
+          <br />
           <br />
           <BottomContainer>
             <FormField
               label="Cor: "
               name="cor"
               value={values.cor}
-              inputType="input"
               type="color"
               placeholder=""
               onChange={handleChange}
             />
-            <ButtonForm>Cadastrar</ButtonForm>
+            <ButtonForm>Cadastrar Categoria</ButtonForm>
           </BottomContainer>
         </Form>
         <ul
           style={{
+            display: 'none',
             margin: '0 auto',
             width: '40%',
           }}
