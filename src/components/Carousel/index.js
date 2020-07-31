@@ -1,30 +1,25 @@
 import React from 'react';
 import VideoCard from './components/VideoCard';
-import Slider, { SliderItem/*, SliderMobile*/ } from './components/Slider';
+import Slider, { SliderItem /* , SliderMobile */ } from './components/Slider';
 import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 
-function VideoCardGroup({
-  ignoreFirstVideo,
-  category,
-}) {
+function VideoCardGroup({ ignoreFirstVideo, category }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
-  const videos = category.videos;
+  const { videos } = category;
 
-  /*checklater*/
+  /* checklater */
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
         <>
-          <Title style={{ backgroundColor: categoryColor || 'red' }}>
-            {categoryTitle}
-          </Title>
-          {categoryExtraLink &&
+          <Title style={{ backgroundColor: categoryColor || 'red' }}>{categoryTitle}</Title>
+          {categoryExtraLink && (
             <ExtraLink href={categoryExtraLink.url} target="_blank">
               {categoryExtraLink.text}
             </ExtraLink>
-          }
+          )}
         </>
       )}
       <Slider arrowColor={categoryColor}>

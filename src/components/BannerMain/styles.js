@@ -24,10 +24,10 @@ ContentAreaContainer.Item = styled.div`
 
   &:first-child {
     margin-right: 5px;
-    text-shadow: 2px 2px 4px rgb(200,200,200,.7);
+    text-shadow: 2px 2px 4px rgb(200, 200, 200, 0.7);
   }
   &:last-child {
-    box-shadow: 0 0 20px 6px rgb(115, 115, 115,.7);
+    box-shadow: 0 0 20px 6px rgb(115, 115, 115, 0.7);
   }
 
   @media (max-width: 800px) {
@@ -81,10 +81,11 @@ export const WatchButton = styled.button`
 
   cursor: pointer;
   outline: none;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 
-  &:focus, &:hover {
-    opacity: .5;
+  &:focus,
+  &:hover {
+    opacity: 0.5;
   }
 
   @media (max-width: 800px) {
@@ -109,7 +110,7 @@ export const BannerMainContainer = styled.section`
 
   &:after,
   &:before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 0;
@@ -121,7 +122,7 @@ export const BannerMainContainer = styled.section`
   &:before {
     top: 0;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   &:after {

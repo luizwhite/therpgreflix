@@ -29,7 +29,7 @@ export const Title = styled.h3`
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1;
 
-  box-shadow: 0 0 20px 1px rgb(115, 115, 115,.7);
+  box-shadow: 0 0 20px 1px rgb(115, 115, 115, 0.7);
 
   @media (max-width: 800px) {
     padding: 10px;
@@ -47,21 +47,21 @@ export const Title = styled.h3`
 export const ExtraLink = styled.a`
   margin-left: 16px;
   text-decoration: none;
-  transition: opacity .5s, font-size .5s;
+  transition: opacity 0.5s, font-size 0.5s;
 
-  opacity: .5;
+  opacity: 0.5;
 
   &:hover,
   &:focus {
     font-size: 1.0625rem;
-    opacity: .8;
+    opacity: 0.8;
   }
 
   @media (max-width: 800px) {
     display: block;
     margin-bottom: 16px;
     margin-left: 2%;
-    opacity: .7;
+    opacity: 0.7;
   }
 `;
 

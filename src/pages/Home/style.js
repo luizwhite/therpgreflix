@@ -13,9 +13,7 @@ function PageHome({ children }) {
   return (
     <>
       <Menu />
-      <Main>
-        {children}
-      </Main>
+      <Main>{children}</Main>
       <Footer />
     </>
   );

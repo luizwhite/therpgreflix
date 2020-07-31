@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import PageDefault from '../../components/PageDefault';
 import FormField from '../../components/FormField';
-import { ButtonForm } from './style.js';
+import {
+  TitleH1, Container, Form, BottomContainer, ButtonForm,
+} from './style';
 
 function CadastroCategoria() {
-  const [categorias, setCategorias] = useState([{
-    nome: 'Teste',
-    descricao: 'Descrição-Teste',
-    cor: '#333',
-  }]);
+  const [categorias, setCategorias] = useState([
+    {
+      nome: 'Teste',
+      descricao: 'Descrição-Teste',
+      cor: '#333',
+    },
+  ]);
   const valoresIniciais = {
     nome: '',
     descricao: '',
@@ -21,7 +25,7 @@ function CadastroCategoria() {
     setValues({
       ...values,
       [chave]: valor,
-    })
+    });
   }
 
   // function handleChange(e) {
@@ -33,34 +37,28 @@ function CadastroCategoria() {
   // }
 
   function handleChange(e) {
+    /*
     console.log(e.target);
     console.log(e.target.getAttribute('name'));
     console.log(e.target.value);
-    setValue(e.target.getAttribute('name'),e.target.value);
+    */
+    setValue(e.target.getAttribute('name'), e.target.value);
   }
 
   return (
-
     <PageDefault>
-      <h1 style={{
-        textShadow: '1px 1px 2px rgb(230,230,230,.7)'
-      }}>Cadastro de Categoria: {values.nome}</h1>
+      <TitleH1>
+        Cadastro de Categoria:
+        {values.nome}
+      </TitleH1>
 
-      <div style={{
-        display: 'flex',
-        marginBottom: '2rem'
-      }}>
-        <form style={{
-          width: '60%',
-          minWidth: '60%'
-        }} onSubmit={function handleSubmit(e){
-          e.preventDefault();
-          setCategorias([
-            ...categorias,
-            values,
-          ]);
-        }}>
-
+      <Container>
+        <Form
+          onSubmit={function handleSubmit(e) {
+            e.preventDefault();
+            setCategorias([...categorias, values]);
+          }}
+        >
           <FormField
             label="Nome da Categoria: "
             name="nome"
@@ -70,7 +68,7 @@ function CadastroCategoria() {
             placeholder="Nomeie a nova categoria"
             onChange={handleChange}
           />
-          <br/>
+          <br />
           <FormField
             label="Descrição: "
             name="descricao"
@@ -79,12 +77,8 @@ function CadastroCategoria() {
             placeholder="Descreva sobre sua categoria"
             onChange={handleChange}
           />
-          <br/>
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
+          <br />
+          <BottomContainer>
             <FormField
               label="Cor: "
               name="cor"
@@ -94,49 +88,55 @@ function CadastroCategoria() {
               placeholder=""
               onChange={handleChange}
             />
-            <ButtonForm>
-              Cadastrar
-            </ButtonForm>
-          </div>
-        </form>
-        <ul style={{
-          margin: '0 auto',
-          width: '40%'
-        }}>
-          {categorias.map((categoria, index) => {
-            return (
-              <li style={{
-                marginBottom: '1rem'
-              }} key={`${categoria}:${index}`}>
-                <div style={{
+            <ButtonForm>Cadastrar</ButtonForm>
+          </BottomContainer>
+        </Form>
+        <ul
+          style={{
+            margin: '0 auto',
+            width: '40%',
+          }}
+        >
+          {categorias.map((categoria, index) => (
+            <li
+              style={{
+                marginBottom: '1rem',
+              }}
+              key={`${categoria}:${index}`}
+            >
+              <div
+                style={{
                   display: 'flex',
-                  alignItems: 'center'
-                }}>
-                  <span style={{
+                  alignItems: 'center',
+                }}
+              >
+                <span
+                  style={{
                     width: '50%',
                     overflow: 'auto',
                     wordWrap: 'break-word',
                     fontWeight: 'bold',
-                    color: `${categoria.cor}`
-                  }}>{categoria.nome}</span>
-                  <span style={{
+                    color: `${categoria.cor}`,
+                  }}
+                >
+                  {categoria.nome}
+                </span>
+                <span
+                  style={{
                     width: '50%',
                     overflow: 'auto',
                     wordWrap: 'break-word',
                     color: `${categoria.cor}`,
-                    fontSize: '10px'
-                  }}>{categoria.descricao}</span>
-                </div>
-              </li>
-            );
-          })}
+                    fontSize: '10px',
+                  }}
+                >
+                  {categoria.descricao}
+                </span>
+              </div>
+            </li>
+          ))}
         </ul>
-      </div>
-
-      {/* <Link to="/">
-          Ir para home
-         </Link>
-      */}
+      </Container>
     </PageDefault>
   );
 }

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Button = styled.button`
   padding: 16px 24px;
@@ -14,17 +14,19 @@ const Button = styled.button`
   font-size: 16px;
   text-decoration: none;
   color: #d9d9d9;
-  opacity: .5;
+  opacity: 0.5;
 
   cursor: pointer;
   outline: none;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 1;
   }
 
   @media (max-width: 800px) {
+    opacity: 1;
     position: fixed;
     left: 0;
     right: 0;

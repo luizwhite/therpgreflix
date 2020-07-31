@@ -67,42 +67,42 @@ export const SliderItem = styled.li`
   }
 `;
 
-
 const Slider = ({ arrowColor, children }) => (
   <Container arrowColor={arrowColor}>
-    <SlickSlider {...{
-      infinite: true,
-      autoplay: false,
-      fade: false,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      arrows: true,
-      centerMode: false,
-      speed: 800,
-      dots: false,
+    <SlickSlider
+      {...{
+        infinite: true,
+        autoplay: false,
+        fade: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        centerMode: false,
+        speed: 800,
+        dots: false,
 
-      variableWidth: true,
-      adaptiveHeight: true,
+        variableWidth: true,
+        adaptiveHeight: true,
 
-      responsive: [
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+            },
           },
-        },
-        {
-        breakpoint: 800,
-        settings: {
-          centerMode: true,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-    ],
-    }}
+          {
+            breakpoint: 800,
+            settings: {
+              centerMode: true,
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+            },
+          },
+        ],
+      }}
     >
       {children}
     </SlickSlider>

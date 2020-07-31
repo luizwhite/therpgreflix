@@ -16,9 +16,7 @@ function PageDefault({ children }) {
   return (
     <>
       <Menu />
-      <Main className="mainSection">
-        {children}
-      </Main>
+      <Main className="mainSection">{children}</Main>
       <Footer />
     </>
   );

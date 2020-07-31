@@ -1,15 +1,11 @@
 import React from 'react';
-import { Container, TitleMsg, Msg } from './style.js';
+import { Container, TitleMsg, Msg } from './style';
 
 function ErrorMsg() {
   return (
     <Container>
-      <TitleMsg>
-        Oops!
-      </TitleMsg>
-      <Msg>
-        We can't seem to find the page you're looking for.
-      </Msg>
+      <TitleMsg>Oops!</TitleMsg>
+      <Msg>We can&apos;t seem to find the page you&apos;re looking for.</Msg>
     </Container>
   );
 }

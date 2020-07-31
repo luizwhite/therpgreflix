@@ -1,5 +1,5 @@
 import React from 'react';
-import { Main, /*Page404Layout,*/ ImageContainer, P404Image } from './styles.js';
+import { Main, /* Page404Layout, */ ImageContainer, P404Image } from './styles';
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
 import ErrorMsg from './components/ErrorMsg';
@@ -17,7 +17,7 @@ function Page404() {
       </Main>
       <Footer />
     </>
-  )
+  );
 }
 
 export default Page404;

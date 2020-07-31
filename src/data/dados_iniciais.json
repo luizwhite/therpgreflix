@@ -85,24 +85,35 @@
       },
       "videos": [
         {
-          "titulo": "Teste de Turing",
-          "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
+          "titulo": "Ni no Kuni II: Revenant Kingdom - Review",
+          "url": "https://www.youtube.com/watch?v=DCpS46furtY"
         },
         {
-          "titulo": "O que é Data Science?",
-          "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+          "titulo": "Review - Final Fantasy VII Remake",
+          "url": "https://www.youtube.com/watch?v=b4loM8rCzIA"
         },
         {
-          "titulo": "Melhor forma de aprender Python",
-          "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
+          "titulo": "Chrono Trigger - ProJared Review",
+          "url": "https://www.youtube.com/watch?v=rrhYxhruwsk"
         },
         {
-          "titulo": "Como ingressar no mercado de Data Science?",
-          "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
+          "titulo": "JRPG Lineup of 2020 - The Strongest Year Yet of JRPGs",
+          "url": "https://www.youtube.com/watch?v=li7S_2tMFTs"
+        },
+        {
+          "titulo": "Os 20 melhores jogos JRPG no Nintendo Switch!",
+          "url": "https://www.youtube.com/watch?v=Th8wnzMk08M"
+        },
+        {
+          "titulo": "Top 10 JRPGs of All Time",
+          "url": "https://www.youtube.com/watch?v=g0BllUA96bI"
+        },
+        {
+          "titulo": "Top 10 PC JRPGs of the Last Three Years (2017, 2018, 2019)",
+          "url": "https://www.youtube.com/watch?v=gI2unFnPTpI"
         }
       ]
     },
-
     {
       "titulo": "Tactical RPG",
       "cor": "#6b5be2",
@@ -113,47 +124,55 @@
       },
       "videos": [
         {
-          "titulo": "Como estudar melhor?",
-          "url": "https://www.youtube.com/watch?v=Is6c9KSGCbk&feature=youtu.be"
+          "titulo": "Checking Out Iron Danger: A Cool New RPG",
+          "url": "https://www.youtube.com/watch?v=gyqfnLTNuvA"
         },
         {
-          "titulo": "Faculdade",
-          "url": "https://www.youtube.com/watch?v=jw06H8esyzQ&feature=youtu.be"
+          "titulo": "Best TURN-BASED Games",
+          "url": "https://www.youtube.com/watch?v=txfUPQwR5qg"
         },
         {
-          "titulo": "Frameworks",
-          "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
+          "titulo": "Warhammer 40K Mechanicus Review",
+          "url": "https://www.youtube.com/watch?v=YirkpurLHkU"
         },
         {
-          "titulo": "A mágica do Aprendizado",
-          "url": "https://www.youtube.com/watch?v=oTEXzpfEpPY"
+          "titulo": "Divinity Original Sin 2: Definitive Edition - Um RPG de verdade",
+          "url": "https://www.youtube.com/watch?v=SB7JGRi7SSU"
         },
         {
-          "titulo": "Como aprender a programar?",
-          "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
+          "titulo": "Valkyria Chronicles 4 - Análise - Vale a pena a Compra?!",
+          "url": "https://www.youtube.com/watch?v=EN9LViMrgTw"
+        },
+        {
+          "titulo": "Disgaea 5 Review",
+          "url": "https://www.youtube.com/watch?v=zfzmMnHpKXM"
         }
       ]
     },
     {
-      "titulo": "Filmes",
+      "titulo": "Roguelike RPG",
       "cor": "orange",
       "corRGB": "rgb(255, 165, 0)",
       "videos": [
         {
-          "titulo": "Interestellar",
-          "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+          "titulo": "Arquivo Steam #12 - Roguelike RPG's",
+          "url": "https://www.youtube.com/watch?v=Ui7gWYFTSx4"
         },
         {
-          "titulo": "Gattaca",
-          "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
+          "titulo": "Best Roguelike Games: Top 10 Roguelikes Ranked for 2020",
+          "url": "https://www.youtube.com/watch?v=tV0oTiL1_g4"
         },
         {
-          "titulo": "A Chegada",
-          "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
+          "titulo": "Top 10 Best Roguelike PC Games",
+          "url": "https://www.youtube.com/watch?v=C0gJnfJ_GgY"
         },
         {
-          "titulo": "Feitiço do Tempo",
-          "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+          "titulo": "Aquele RPG Roguelite que a gente curte",
+          "url": "https://www.youtube.com/watch?v=1SA2v-ABjkc"
+        },
+        {
+          "titulo": "10 Best Roguelike Pixel Art Games For iOS & Android 2020",
+          "url": "https://www.youtube.com/watch?v=UhruDEMGfWw"
         }
       ]
     },

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const VideoCardContainer = styled.a`
+const VideoCardContainer = styled.a`
   display: flex;
   width: var(--videoCard-container-width);
   height: var(--videoCard-container-height);
@@ -18,10 +18,10 @@ export const VideoCardContainer = styled.a`
   text-decoration: none;
   color: white;
 
-  opacity: .6;
+  opacity: 0.6;
   overflow: hidden;
   cursor: pointer;
-  transition: opacity .4s, width .4s, height .4s;
+  transition: opacity 0.4s, width 0.4s, height 0.4s;
 
   &:hover,
   &:focus {
@@ -34,3 +34,5 @@ export const VideoCardContainer = styled.a`
     margin-left: 20px;
   }
 `;
+
+export default VideoCardContainer;
