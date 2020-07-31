@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import PageDefault from '../../components/PageDefault';
 import FormField from '../../components/FormField';
@@ -50,6 +50,25 @@ function CadastroCategoria() {
     setCategorias([...categorias, values]);
   }
 
+  useEffect(() => {
+    const URL = 'http://localhost:8080/categorias';
+    // setCategorias([...categorias]);
+    fetch(URL)
+      .then((response) => response.json())
+      .then((responseParsed) => {
+        setCategorias([...categorias, ...responseParsed]);
+      });
+  }, []);
+
+  // setTimeout(() => {
+  //     {
+  //       id: 1,
+  //       nome: 'Front-End',
+  //       descricao: 'Uma categoria bacanadussa',
+  //       cor: '#6bd1ff',
+  //     },
+  // }, 3 * 1000);
+
   return (
     <PageDefault>
       <TitleH1>
@@ -92,7 +111,6 @@ function CadastroCategoria() {
         </Form>
         <ul
           style={{
-            display: 'none',
             margin: '0 auto',
             width: '40%',
           }}
