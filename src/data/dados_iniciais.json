@@ -1,211 +1,272 @@
 {
   "categorias": [
     {
+      "id": 1,
       "titulo": "MMORPG",
-      "link": "https://www.mmorpg.com/",
       "cor": "#e5ab29",
-      "corRGB": "rgb(229, 171, 41)",
+      "descricao": "MMORPG Reviews",
       "link_extra": {
         "text": "MMORPG Reviews",
         "url": "https://www.mmorpg.com/reviews"
-      },
-      "videos": [
-        {
-          "titulo": "It's a Beautiful World #AoC",
-          "url": "https://www.youtube.com/watch?v=C42knfjbLgw"
-        },
-        {
-          "titulo": "Genuinely The Most Exciting Upcoming MMORPG - Ashes Of Creation",
-          "url": "https://www.youtube.com/watch?v=1s82xJnx1EY"
-        },
-        {
-          "titulo": "New World 2021 MMORPG... Delayed",
-          "url": "https://www.youtube.com/watch?v=L9b_RpQZB1U&t=20s"
-        },
-        {
-          "titulo": "A INVASÃO Anime nos MMORPGs!",
-          "url": "https://www.youtube.com/watch?v=U1DuDhku3jg"
-        },
-        {
-          "titulo": "A PROCURA ACABOU? Ashes of Creation, O MMORPG Que Faltava!",
-          "url": "https://www.youtube.com/watch?v=iYiEQ5pI0d0"
-        },
-        {
-          "titulo": "Chegou o BETA! WoW Shadowlands, Do 50 ao 60!",
-          "url": "https://www.youtube.com/watch?v=PUpDyvQNBhU"
-        },
-        {
-          "titulo": "Dungeons & Dragons Online First Impressions \"Is It Worth Playing?\"",
-          "url": "https://www.youtube.com/watch?v=amz86lxRwlg"
-        },
-        {
-          "titulo": "10 Free to Play MMORPGs You Should Try In August, 2020!",
-          "url": "https://www.youtube.com/watch?v=pcIQj_0qYaE&t=35s"
-        }
-      ]
+      }
     },
     {
+      "id": 2,
       "titulo": "ARPG",
       "cor": "#571305",
-      "corRGB": "rgb(87, 19, 5)",
+      "descricao": "Action RPG Reviews",
       "link_extra": {
         "text": "Action RPG Reviews",
         "url": "https://www.pcgamer.com/best-action-rpg-pc/"
-      },
-      "videos": [
-        {
-          "titulo": "Path of Exile 2 Gameplay Preview",
-          "url": "https://www.youtube.com/watch?v=V2VRRSVgCL4"
-        },
-        {
-          "titulo": "Diablo 4 Gameplay Demo: Blizzcon 2019",
-          "url": "https://www.youtube.com/watch?v=6ZtmNAMxwMM"
-        },
-        {
-          "titulo": "Diablo 4 e Path of Exile 2! O FUTURO dos ARPGs!",
-          "url": "https://www.youtube.com/watch?v=DDYlkViN4es"
-        },
-        {
-          "titulo": "Grim Dawn: Between Diablo 3 & Path of Exile - Overview and Review",
-          "url": "https://www.youtube.com/watch?v=bJWQCDLG5uw"
-        },
-        {
-          "titulo": "Pagan Online First Impressions \"Is It Worth Playing?\"",
-          "url": "https://www.youtube.com/watch?v=d7po_DWJotA"
-        }
-      ]
+      }
     },
     {
+      "id": 3,
       "titulo": "JRPG",
       "cor": "#9cd33b",
-      "corRGB": "rgb(156, 211, 59)",
+      "descricao": "JRPG Reviews - DarkStation",
       "link_extra": {
         "text": "JRPG Reviews - DarkStation",
         "url": "https://www.darkstation.com/reviews/tag/JRPG"
-      },
-      "videos": [
-        {
-          "titulo": "Ni no Kuni II: Revenant Kingdom - Review",
-          "url": "https://www.youtube.com/watch?v=DCpS46furtY"
-        },
-        {
-          "titulo": "Review - Final Fantasy VII Remake",
-          "url": "https://www.youtube.com/watch?v=b4loM8rCzIA"
-        },
-        {
-          "titulo": "Chrono Trigger - ProJared Review",
-          "url": "https://www.youtube.com/watch?v=rrhYxhruwsk"
-        },
-        {
-          "titulo": "JRPG Lineup of 2020 - The Strongest Year Yet of JRPGs",
-          "url": "https://www.youtube.com/watch?v=li7S_2tMFTs"
-        },
-        {
-          "titulo": "Os 20 melhores jogos JRPG no Nintendo Switch!",
-          "url": "https://www.youtube.com/watch?v=Th8wnzMk08M"
-        },
-        {
-          "titulo": "Top 10 JRPGs of All Time",
-          "url": "https://www.youtube.com/watch?v=g0BllUA96bI"
-        },
-        {
-          "titulo": "Top 10 PC JRPGs of the Last Three Years (2017, 2018, 2019)",
-          "url": "https://www.youtube.com/watch?v=gI2unFnPTpI"
-        }
-      ]
+      }
     },
     {
+      "id": 4,
       "titulo": "Tactical RPG",
       "cor": "#6b5be2",
-      "corRGB": "rgb(107, 91, 226)",
+      "descricao": "The Best Tactical & Strategy RPGs | Strategy Gamer",
       "link_extra": {
         "text": "The Best Tactical & Strategy RPGs | Strategy Gamer",
         "url": "https://www.strategygamer.com/articles/best-trpg/"
-      },
-      "videos": [
-        {
-          "titulo": "Checking Out Iron Danger: A Cool New RPG",
-          "url": "https://www.youtube.com/watch?v=gyqfnLTNuvA"
-        },
-        {
-          "titulo": "Best TURN-BASED Games",
-          "url": "https://www.youtube.com/watch?v=txfUPQwR5qg"
-        },
-        {
-          "titulo": "Warhammer 40K Mechanicus Review",
-          "url": "https://www.youtube.com/watch?v=YirkpurLHkU"
-        },
-        {
-          "titulo": "Divinity Original Sin 2: Definitive Edition - Um RPG de verdade",
-          "url": "https://www.youtube.com/watch?v=SB7JGRi7SSU"
-        },
-        {
-          "titulo": "Valkyria Chronicles 4 - Análise - Vale a pena a Compra?!",
-          "url": "https://www.youtube.com/watch?v=EN9LViMrgTw"
-        },
-        {
-          "titulo": "Disgaea 5 Review",
-          "url": "https://www.youtube.com/watch?v=zfzmMnHpKXM"
-        }
-      ]
+      }
     },
     {
+      "id": 5,
       "titulo": "Roguelike RPG",
-      "cor": "orange",
-      "corRGB": "rgb(255, 165, 0)",
-      "videos": [
-        {
-          "titulo": "Arquivo Steam #12 - Roguelike RPG's",
-          "url": "https://www.youtube.com/watch?v=Ui7gWYFTSx4"
-        },
-        {
-          "titulo": "Best Roguelike Games: Top 10 Roguelikes Ranked for 2020",
-          "url": "https://www.youtube.com/watch?v=tV0oTiL1_g4"
-        },
-        {
-          "titulo": "Top 10 Best Roguelike PC Games",
-          "url": "https://www.youtube.com/watch?v=C0gJnfJ_GgY"
-        },
-        {
-          "titulo": "Aquele RPG Roguelite que a gente curte",
-          "url": "https://www.youtube.com/watch?v=1SA2v-ABjkc"
-        },
-        {
-          "titulo": "10 Best Roguelike Pixel Art Games For iOS & Android 2020",
-          "url": "https://www.youtube.com/watch?v=UhruDEMGfWw"
-        }
-      ]
+      "cor": "red",
+      "descricao": "Best Roguelike Games on PC & Steam",
+      "link_extra": {
+        "text": "Best Roguelike Games on PC & Steam",
+        "url": "https://www.ozarc.games/best-roguelike-games/"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "It's a Beautiful World #AoC",
+      "url": "https://www.youtube.com/watch?v=C42knfjbLgw"
     },
     {
-      "titulo": "Games",
-      "cor": "red",
-      "corRGB": "rgb(255, 0, 0)",
-      "link_extra": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/formacao-jogos-unity"
-      },
-      "videos": [
-        {
-          "titulo": "Final Fantasy 7",
-          "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
-        },
-        {
-          "titulo": "Assassins Creed Valhalla",
-          "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
-        },
-        {
-          "titulo": "God of War 4",
-          "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE"
-        },
-        {
-          "titulo": "Resident Evil 8",
-          "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
-        },
-        {
-          "titulo": "Pokémon Let's Go Pikachu/Eevee",
-          "url": "https://www.youtube.com/watch?v=L56q_k2ydrs"
-        }
-      ]
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "Genuinely The Most Exciting Upcoming MMORPG - Ashes Of Creation",
+      "url": "https://www.youtube.com/watch?v=1s82xJnx1EY"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "New World 2021 MMORPG... Delayed",
+      "url": "https://www.youtube.com/watch?v=L9b_RpQZB1U&t=20s"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "A INVASÃO Anime nos MMORPGs!",
+      "url": "https://www.youtube.com/watch?v=U1DuDhku3jg"
+    },
+    {
+      "id": 5,
+      "categoriaId": 1,
+      "titulo": "A PROCURA ACABOU? Ashes of Creation, O MMORPG Que Faltava!",
+      "url": "https://www.youtube.com/watch?v=iYiEQ5pI0d0"
+    },
+    {
+      "id": 6,
+      "categoriaId": 1,
+      "titulo": "Chegou o BETA! WoW Shadowlands, Do 50 ao 60!",
+      "url": "https://www.youtube.com/watch?v=PUpDyvQNBhU"
+    },
+    {
+      "id": 7,
+      "categoriaId": 1,
+      "titulo": "Dungeons & Dragons Online First Impressions \"Is It Worth Playing?\"",
+      "url": "https://www.youtube.com/watch?v=amz86lxRwlg"
+    },
+    {
+      "id": 8,
+      "categoriaId": 1,
+      "titulo": "10 Free to Play MMORPGs You Should Try In August, 2020!",
+      "url": "https://www.youtube.com/watch?v=pcIQj_0qYaE&t=35s"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "Path of Exile 2 Gameplay Preview",
+      "url": "https://www.youtube.com/watch?v=V2VRRSVgCL4"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "Diablo 4 Gameplay Demo: Blizzcon 2019",
+      "url": "https://www.youtube.com/watch?v=6ZtmNAMxwMM"
+    },
+    {
+      "id": 11,
+      "categoriaId": 2,
+      "titulo": "Diablo 4 e Path of Exile 2! O FUTURO dos ARPGs!",
+      "url": "https://www.youtube.com/watch?v=DDYlkViN4es"
+    },
+    {
+      "id": 12,
+      "categoriaId": 2,
+      "titulo": "Grim Dawn: Between Diablo 3 & Path of Exile - Overview and Review",
+      "url": "https://www.youtube.com/watch?v=bJWQCDLG5uw"
+    },
+    {
+      "id": 13,
+      "categoriaId": 2,
+      "titulo": "Pagan Online First Impressions \"Is It Worth Playing?\"",
+      "url": "https://www.youtube.com/watch?v=d7po_DWJotA"
+    },
+    {
+      "id": 14,
+      "categoriaId": 3,
+      "titulo": "Ni no Kuni II: Revenant Kingdom - Review",
+      "url": "https://www.youtube.com/watch?v=DCpS46furtY"
+    },
+    {
+      "id": 15,
+      "categoriaId": 3,
+      "titulo": "Review - Final Fantasy VII Remake",
+      "url": "https://www.youtube.com/watch?v=b4loM8rCzIA"
+    },
+    {
+      "id": 16,
+      "categoriaId": 3,
+      "titulo": "Chrono Trigger - ProJared Review",
+      "url": "https://www.youtube.com/watch?v=rrhYxhruwsk"
+    },
+    {
+      "id": 17,
+      "categoriaId": 3,
+      "titulo": "JRPG Lineup of 2020 - The Strongest Year Yet of JRPGs",
+      "url": "https://www.youtube.com/watch?v=li7S_2tMFTs"
+    },
+    {
+      "id": 18,
+      "categoriaId": 3,
+      "titulo": "Os 20 melhores jogos JRPG no Nintendo Switch!",
+      "url": "https://www.youtube.com/watch?v=Th8wnzMk08M"
+    },
+    {
+      "id": 19,
+      "categoriaId": 3,
+      "titulo": "Top 10 JRPGs of All Time",
+      "url": "https://www.youtube.com/watch?v=g0BllUA96bI"
+    },
+    {
+      "id": 20,
+      "categoriaId": 3,
+      "titulo": "Top 10 PC JRPGs of the Last Three Years (2017, 2018, 2019)",
+      "url": "https://www.youtube.com/watch?v=gI2unFnPTpI"
+    },
+    {
+      "id": 21,
+      "categoriaId": 4,
+      "titulo": "Checking Out Iron Danger: A Cool New RPG",
+      "url": "https://www.youtube.com/watch?v=gyqfnLTNuvA"
+    },
+    {
+      "id": 22,
+      "categoriaId": 4,
+      "titulo": "Best TURN-BASED Games",
+      "url": "https://www.youtube.com/watch?v=txfUPQwR5qg"
+    },
+    {
+      "id": 23,
+      "categoriaId": 4,
+      "titulo": "Warhammer 40K Mechanicus Review",
+      "url": "https://www.youtube.com/watch?v=YirkpurLHkU"
+    },
+    {
+      "id": 24,
+      "categoriaId": 4,
+      "titulo": "Divinity Original Sin 2: Definitive Edition - Um RPG de verdade",
+      "url": "https://www.youtube.com/watch?v=SB7JGRi7SSU"
+    },
+    {
+      "id": 25,
+      "categoriaId": 4,
+      "titulo": "Valkyria Chronicles 4 - Análise - Vale a pena a Compra?!",
+      "url": "https://www.youtube.com/watch?v=EN9LViMrgTw"
+    },
+    {
+      "id": 26,
+      "categoriaId": 4,
+      "titulo": "Disgaea 5 Review",
+      "url": "https://www.youtube.com/watch?v=zfzmMnHpKXM"
+    },
+    {
+      "id": 27,
+      "categoriaId": 5,
+      "titulo": "Arquivo Steam #12 - Roguelike RPG's",
+      "url": "https://www.youtube.com/watch?v=Ui7gWYFTSx4"
+    },
+    {
+      "id": 28,
+      "categoriaId": 5,
+      "titulo": "Best Roguelike Games: Top 10 Roguelikes Ranked for 2020",
+      "url": "https://www.youtube.com/watch?v=tV0oTiL1_g4"
+    },
+    {
+      "id": 29,
+      "categoriaId": 5,
+      "titulo": "Top 10 Best Roguelike PC Games",
+      "url": "https://www.youtube.com/watch?v=C0gJnfJ_GgY"
+    },
+    {
+      "id": 30,
+      "categoriaId": 5,
+      "titulo": "Aquele RPG Roguelite que a gente curte",
+      "url": "https://www.youtube.com/watch?v=1SA2v-ABjkc"
+    },
+    {
+      "id": 31,
+      "categoriaId": 5,
+      "titulo": "10 Best Roguelike Pixel Art Games For iOS & Android 2020",
+      "url": "https://www.youtube.com/watch?v=UhruDEMGfWw"
+    },
+    {
+      "id": 32,
+      "categoriaId": 6,
+      "titulo": "Final Fantasy 7",
+      "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
+    },
+    {
+      "id": 33,
+      "categoriaId": 6,
+      "titulo": "Assassins Creed Valhalla",
+      "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
+    },
+    {
+      "id": 34,
+      "categoriaId": 6,
+      "titulo": "God of War 4",
+      "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE"
+    },
+    {
+      "id": 35,
+      "categoriaId": 6,
+      "titulo": "Resident Evil 8",
+      "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
+    },
+    {
+      "id": 36,
+      "categoriaId": 6,
+      "titulo": "Pokémon Let's Go Pikachu/Eevee",
+      "url": "https://www.youtube.com/watch?v=L56q_k2ydrs"
     }
   ]
 }

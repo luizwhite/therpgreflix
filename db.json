@@ -42,12 +42,12 @@
     },
     {
       "id": 5,
-      "titulo": "Games",
+      "titulo": "Roguelike RPG",
       "cor": "red",
-      "descricao": "Formação de Jogos na Alura",
+      "descricao": "Best Roguelike Games on PC & Steam",
       "link_extra": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
+        "text": "Best Roguelike Games on PC & Steam",
+        "url": "https://www.ozarc.games/best-roguelike-games/"
       }
     }
   ],
@@ -55,146 +55,218 @@
     {
       "id": 1,
       "categoriaId": 1,
-      "titulo": "SEO com React",
-      "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+      "titulo": "It's a Beautiful World #AoC",
+      "url": "https://www.youtube.com/watch?v=C42knfjbLgw"
     },
     {
       "id": 2,
       "categoriaId": 1,
-      "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
+      "titulo": "Genuinely The Most Exciting Upcoming MMORPG - Ashes Of Creation",
+      "url": "https://www.youtube.com/watch?v=1s82xJnx1EY"
     },
     {
       "id": 3,
       "categoriaId": 1,
-      "titulo": "Componentização com VanillaJS #AluraMais",
-      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
+      "titulo": "New World 2021 MMORPG... Delayed",
+      "url": "https://www.youtube.com/watch?v=L9b_RpQZB1U&t=20s"
     },
     {
       "id": 4,
       "categoriaId": 1,
-      "titulo": "Pare de chutar e aprenda a display: inline #01",
-      "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
+      "titulo": "A INVASÃO Anime nos MMORPGs!",
+      "url": "https://www.youtube.com/watch?v=U1DuDhku3jg"
     },
     {
       "id": 5,
       "categoriaId": 1,
-      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
+      "titulo": "A PROCURA ACABOU? Ashes of Creation, O MMORPG Que Faltava!",
+      "url": "https://www.youtube.com/watch?v=iYiEQ5pI0d0"
     },
     {
       "id": 6,
       "categoriaId": 1,
-      "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
+      "titulo": "Chegou o BETA! WoW Shadowlands, Do 50 ao 60!",
+      "url": "https://www.youtube.com/watch?v=PUpDyvQNBhU"
     },
     {
       "id": 7,
       "categoriaId": 1,
-      "titulo": "Novidades do Angular v9",
-      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
+      "titulo": "Dungeons & Dragons Online First Impressions \"Is It Worth Playing?\"",
+      "url": "https://www.youtube.com/watch?v=amz86lxRwlg"
     },
     {
       "id": 8,
-      "categoriaId": 2,
-      "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
-      "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
+      "categoriaId": 1,
+      "titulo": "10 Free to Play MMORPGs You Should Try In August, 2020!",
+      "url": "https://www.youtube.com/watch?v=pcIQj_0qYaE&t=35s"
     },
     {
       "id": 9,
       "categoriaId": 2,
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
+      "titulo": "Path of Exile 2 Gameplay Preview",
+      "url": "https://www.youtube.com/watch?v=V2VRRSVgCL4"
     },
     {
       "id": 10,
       "categoriaId": 2,
-      "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
-      "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY"
+      "titulo": "Diablo 4 Gameplay Demo: Blizzcon 2019",
+      "url": "https://www.youtube.com/watch?v=6ZtmNAMxwMM"
     },
     {
       "id": 11,
       "categoriaId": 2,
-      "titulo": "API: Dicionário do Programador",
-      "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
+      "titulo": "Diablo 4 e Path of Exile 2! O FUTURO dos ARPGs!",
+      "url": "https://www.youtube.com/watch?v=DDYlkViN4es"
     },
     {
       "id": 12,
       "categoriaId": 2,
-      "titulo": "Usando Git Direito",
-      "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
+      "titulo": "Grim Dawn: Between Diablo 3 & Path of Exile - Overview and Review",
+      "url": "https://www.youtube.com/watch?v=bJWQCDLG5uw"
     },
     {
       "id": 13,
-      "categoriaId": 3,
-      "titulo": "Teste de Turing",
-      "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
+      "categoriaId": 2,
+      "titulo": "Pagan Online First Impressions \"Is It Worth Playing?\"",
+      "url": "https://www.youtube.com/watch?v=d7po_DWJotA"
     },
     {
       "id": 14,
       "categoriaId": 3,
-      "titulo": "O que é Data Science?",
-      "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+      "titulo": "Ni no Kuni II: Revenant Kingdom - Review",
+      "url": "https://www.youtube.com/watch?v=DCpS46furtY"
     },
     {
       "id": 15,
       "categoriaId": 3,
-      "titulo": "Melhor forma de aprender Python",
-      "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
+      "titulo": "Review - Final Fantasy VII Remake",
+      "url": "https://www.youtube.com/watch?v=b4loM8rCzIA"
     },
     {
       "id": 16,
       "categoriaId": 3,
-      "titulo": "Como ingressar no mercado de Data Science?",
-      "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
+      "titulo": "Chrono Trigger - ProJared Review",
+      "url": "https://www.youtube.com/watch?v=rrhYxhruwsk"
     },
     {
       "id": 17,
-      "categoriaId": 4,
-      "titulo": "Interestellar",
-      "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+      "categoriaId": 3,
+      "titulo": "JRPG Lineup of 2020 - The Strongest Year Yet of JRPGs",
+      "url": "https://www.youtube.com/watch?v=li7S_2tMFTs"
     },
     {
       "id": 18,
-      "categoriaId": 4,
-      "titulo": "Gattaca",
-      "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
+      "categoriaId": 3,
+      "titulo": "Os 20 melhores jogos JRPG no Nintendo Switch!",
+      "url": "https://www.youtube.com/watch?v=Th8wnzMk08M"
     },
     {
       "id": 19,
-      "categoriaId": 4,
-      "titulo": "A Chegada",
-      "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
+      "categoriaId": 3,
+      "titulo": "Top 10 JRPGs of All Time",
+      "url": "https://www.youtube.com/watch?v=g0BllUA96bI"
     },
     {
       "id": 20,
-      "categoriaId": 4,
-      "titulo": "Feitiço do Tempo",
-      "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
+      "categoriaId": 3,
+      "titulo": "Top 10 PC JRPGs of the Last Three Years (2017, 2018, 2019)",
+      "url": "https://www.youtube.com/watch?v=gI2unFnPTpI"
     },
     {
       "id": 21,
+      "categoriaId": 4,
+      "titulo": "Checking Out Iron Danger: A Cool New RPG",
+      "url": "https://www.youtube.com/watch?v=gyqfnLTNuvA"
+    },
+    {
+      "id": 22,
+      "categoriaId": 4,
+      "titulo": "Best TURN-BASED Games",
+      "url": "https://www.youtube.com/watch?v=txfUPQwR5qg"
+    },
+    {
+      "id": 23,
+      "categoriaId": 4,
+      "titulo": "Warhammer 40K Mechanicus Review",
+      "url": "https://www.youtube.com/watch?v=YirkpurLHkU"
+    },
+    {
+      "id": 24,
+      "categoriaId": 4,
+      "titulo": "Divinity Original Sin 2: Definitive Edition - Um RPG de verdade",
+      "url": "https://www.youtube.com/watch?v=SB7JGRi7SSU"
+    },
+    {
+      "id": 25,
+      "categoriaId": 4,
+      "titulo": "Valkyria Chronicles 4 - Análise - Vale a pena a Compra?!",
+      "url": "https://www.youtube.com/watch?v=EN9LViMrgTw"
+    },
+    {
+      "id": 26,
+      "categoriaId": 4,
+      "titulo": "Disgaea 5 Review",
+      "url": "https://www.youtube.com/watch?v=zfzmMnHpKXM"
+    },
+    {
+      "id": 27,
       "categoriaId": 5,
+      "titulo": "Arquivo Steam #12 - Roguelike RPG's",
+      "url": "https://www.youtube.com/watch?v=Ui7gWYFTSx4"
+    },
+    {
+      "id": 28,
+      "categoriaId": 5,
+      "titulo": "Best Roguelike Games: Top 10 Roguelikes Ranked for 2020",
+      "url": "https://www.youtube.com/watch?v=tV0oTiL1_g4"
+    },
+    {
+      "id": 29,
+      "categoriaId": 5,
+      "titulo": "Top 10 Best Roguelike PC Games",
+      "url": "https://www.youtube.com/watch?v=C0gJnfJ_GgY"
+    },
+    {
+      "id": 30,
+      "categoriaId": 5,
+      "titulo": "Aquele RPG Roguelite que a gente curte",
+      "url": "https://www.youtube.com/watch?v=1SA2v-ABjkc"
+    },
+    {
+      "id": 31,
+      "categoriaId": 5,
+      "titulo": "10 Best Roguelike Pixel Art Games For iOS & Android 2020",
+      "url": "https://www.youtube.com/watch?v=UhruDEMGfWw"
+    },
+    {
+      "id": 32,
+      "categoriaId": 6,
       "titulo": "Final Fantasy 7",
       "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
     },
     {
-      "id": 22,
-      "categoriaId": 5,
+      "id": 33,
+      "categoriaId": 6,
       "titulo": "Assassins Creed Valhalla",
       "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
     },
     {
-      "id": 23,
-      "categoriaId": 5,
+      "id": 34,
+      "categoriaId": 6,
       "titulo": "God of War 4",
       "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE"
     },
     {
-      "id": 24,
-      "categoriaId": 5,
+      "id": 35,
+      "categoriaId": 6,
       "titulo": "Resident Evil 8",
       "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
+    },
+    {
+      "id": 36,
+      "categoriaId": 6,
+      "titulo": "Pokémon Let's Go Pikachu/Eevee",
+      "url": "https://www.youtube.com/watch?v=L56q_k2ydrs"
     }
   ]
 }

@@ -5,19 +5,9 @@ import FormField from '../../components/FormField';
 import {
   TitleH1, Container, Form, HrBreak, BottomContainer, ButtonForm,
 } from './style';
+import useForm from '../../hooks/useForm';
 
 function CadastroCategoria() {
-  const [categorias, setCategorias] = useState([
-    {
-      titulo: 'TESTE',
-      descricao: 'Descrição-Teste',
-      link_extra: {
-        text: 'Descrição-Teste',
-        url: '',
-      },
-      cor: '#333',
-    },
-  ]);
   const valoresIniciais = {
     titulo: '',
     descricao: '',
@@ -25,37 +15,30 @@ function CadastroCategoria() {
       text: '',
       url: '',
     },
-    cor: '#642',
+    cor: '#000',
   };
-  const [values, setValues] = useState(valoresIniciais);
+  // const [values, setValues] = useState(valoresIniciais);
+  const [categorias, setCategorias] = useState([]);
+  const { handleChange, values, clearValues } = useForm(valoresIniciais);
 
-  function setValue(chave, valor) {
-    setValues({
-      ...values,
-      [chave]: valor,
-    });
-  }
-
-  // function handleChange(e) {
-  //   const { getAttribute, value } = e.target;
-  //   setValue(
-  //     getAttribute('name'),
-  //     value
-  //   );
+  // function setValue(chave, valor) {
+  //   setValues({
+  //     ...values,
+  //     [chave]: valor,
+  //   });
+  //
+  //   clearValue();
   // }
-
-  function handleChange(e) {
-    /*
-    console.log(e.target);
-    console.log(e.target.getAttribute('name'));
-    console.log(e.target.value);
-    */
-    setValue(e.target.getAttribute('name'), e.target.value);
-  }
+  //
+  // function handleChange(e) {
+  //   setValue(e.target.getAttribute('name'), e.target.value);
+  // }
 
   function handleSubmit(e) {
     e.preventDefault();
     setCategorias([...categorias, values]);
+
+    clearValues();
   }
 
   useEffect(() => {
@@ -69,15 +52,6 @@ function CadastroCategoria() {
         setCategorias([...categorias, ...responseParsed]);
       });
   }, []);
-
-  // setTimeout(() => {
-  //     {
-  //       id: 1,
-  //       titulo: 'Front-End',
-  //       descricao: 'Uma categoria bacanadussa',
-  //       cor: '#6bd1ff',
-  //     },
-  // }, 3 * 1000);
 
   return (
     <PageDefault>
@@ -122,7 +96,6 @@ function CadastroCategoria() {
         </Form>
         <TitleH1 style={{ marginTop: '1rem', marginBottom: '2rem' }}>
           Categorias Cadastradas:&nbsp;
-          {values.titulo}
         </TitleH1>
         <ul
           style={{
