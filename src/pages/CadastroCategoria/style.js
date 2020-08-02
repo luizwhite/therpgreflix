@@ -7,22 +7,28 @@ export const ButtonForm = styled.button`
   padding: 0.5rem;
   background-color: var(--primary-black-2);
 
-  border: 2px solid transparent;
+  border: 2px solid #f5f5f5;
   border-radius: 6px;
 
   font-size: 1.2rem;
   font-weight: bold;
   color: #f5f5f5;
 
-  opacity: 0.7;
-  transition: opacity 0.5s, color 0.5s, border-color 0.5s;
+  transition: opacity 0.4s, border-color 0.4s;
+  cursor: pointer;
 
-  &:hover,
   &:focus {
-    border-color: #f5f5f5;
-    opacity: 1;
-    color: var(--grayLight);
-    cursor: pointer;
+    opacity: 0.4;
+  }
+
+  @media not all and (max-width: 1200px) {
+    opacity: 0.7;
+    border-color: transparent;
+    &:hover,
+    &:focus {
+      opacity: 1;
+      border-color: #f5f5f5;
+    }
   }
 
   @media (max-width: 600px) {

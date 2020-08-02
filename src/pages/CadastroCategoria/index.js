@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 import PageDefault from '../../components/PageDefault';
 import FormField from '../../components/FormField';
@@ -6,8 +7,10 @@ import {
   TitleH1, Container, Form, HrBreak, BottomContainer, ButtonForm,
 } from './style';
 import useForm from '../../hooks/useForm';
+import categsRepository from '../../repositories/categorias';
 
 function CadastroCategoria() {
+  const history = useHistory();
   const valoresIniciais = {
     titulo: '',
     descricao: '',
@@ -15,7 +18,7 @@ function CadastroCategoria() {
       text: '',
       url: '',
     },
-    cor: '#000',
+    cor: '#000000',
   };
   // const [values, setValues] = useState(valoresIniciais);
   const [categorias, setCategorias] = useState([]);
@@ -33,25 +36,33 @@ function CadastroCategoria() {
   // function handleChange(e) {
   //   setValue(e.target.getAttribute('name'), e.target.value);
   // }
+  useEffect(() => {
+    categsRepository
+      .getAll()
+      .then((categs) => {
+        setCategorias(categs);
+      });
+    // eslint-disable-next-line
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
-    setCategorias([...categorias, values]);
 
+    categsRepository.create({
+      titulo: values.titulo,
+      descricao: values.descricao,
+      link_extra: {
+        text: values.descricao,
+        url: '',
+      },
+      cor: values.cor,
+    })
+      .then(() => {
+        history.push('/cadastro/categoria');
+      });
+    setCategorias([...categorias, values]);
     clearValues();
   }
-
-  useEffect(() => {
-    const URL = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categorias'
-      : 'https://therpgreflix.herokuapp.com/categorias';
-    // setCategorias([...categorias]);
-    fetch(URL)
-      .then((response) => response.json())
-      .then((responseParsed) => {
-        setCategorias([...categorias, ...responseParsed]);
-      });
-  }, []);
 
   return (
     <PageDefault>
@@ -63,7 +74,7 @@ function CadastroCategoria() {
       <Container>
         <Form onSubmit={handleSubmit}>
           <FormField
-            label="Nome da Categoria: "
+            label="Título da Categoria: "
             name="titulo"
             value={values.titulo}
             type="text"
@@ -101,24 +112,19 @@ function CadastroCategoria() {
           style={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
-            margin: '0 auto',
-            width: '80%',
+            width: '100%',
             listStyleType: 'none',
-            padding: '1rem',
-            borderRadius: '4px',
-            backgroundColor: '#484d51',
+            padding: '1rem 0',
           }}
         >
           {categorias.map((categoria, index) => (
             <li
               style={{
-                width: '100%',
                 padding: '.5rem',
                 marginBottom: '4px',
-                borderRadius: '4px',
-                border: '1px solid',
-                backgroundColor: '#6c737a',
+                borderRadius: '10px',
+                borderBottom: '1px solid',
+                backgroundImage: 'linear-gradient(to top, #6c737a 0%, #5a6066 2%, #4d5256 5%, #404447 8%, #2e3033 15%, var(--grayDark) 25%)',
                 textShadow: '1px 1px black',
               }}
               key={`${categoria}:${index}`}
@@ -126,6 +132,7 @@ function CadastroCategoria() {
               <div
                 style={{
                   display: 'flex',
+                  justifyContent: 'space-between',
                   alignItems: 'center',
                 }}
               >
@@ -142,6 +149,7 @@ function CadastroCategoria() {
                 </span>
                 <span
                   style={{
+                    width: '40%',
                     overflow: 'auto',
                     wordWrap: 'break-word',
                     color: `${categoria.cor}`,
@@ -149,6 +157,20 @@ function CadastroCategoria() {
                   }}
                 >
                   {categoria.descricao}
+                </span>
+                <span
+                  style={{
+                    overflow: 'auto',
+                    wordWrap: 'break-word',
+                    color: 'white',
+                    fontSize: '16px',
+                    backgroundColor: `${categoria.cor}`,
+                    fontWeight: 'bold',
+                    padding: '3px',
+                    borderRadius: '6px',
+                  }}
+                >
+                  {categoria.cor}
                 </span>
               </div>
             </li>

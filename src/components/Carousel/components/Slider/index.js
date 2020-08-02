@@ -7,25 +7,21 @@ const Container = styled.ul`
   height: calc(calc(var(--videoCard-container-height) * var(--videoCard-focus-scale)) * 1.05);
   padding: 0;
   margin: 0;
-
   .slick-prev,
   .slick-next {
     width: 30px;
     height: 30px;
     margin: auto;
-
     z-index: 50;
     top: 0;
     bottom: 0;
     transform: initial;
-
     &::before {
       font-size: 30px;
       color: ${({ arrowColor }) => arrowColor};
       overfo
     }
   }
-
   .slick-track {
     display: flex;
   }
@@ -35,18 +31,16 @@ const Container = styled.ul`
     align-items: center;
     justify-content: center;
   }
-
   .slick-slider, .slick-list, .slick-track {
     height: 100%;
   }
-
   .slick-prev {
     left: -36px;
   }
   .slick-next {
     right: 16px;
   }
-  
+
   @media not all and (max-width: 1200px) {
     .slick-current a:hover,
     .slick-current a:focus {
@@ -55,7 +49,6 @@ const Container = styled.ul`
       border: 0;
       opacity: 1;
     }
-
     .slick-active:not(.slick-current) {
       a:hover, a:focus {
         transform: scale(var(--videoCard-focus-scale));
@@ -65,27 +58,20 @@ const Container = styled.ul`
       }
     }
   }
-
   @media (max-width: 1200px) {
     .slick-current {
       a {
-        transform: scale(var(--videoCard-focus-scale-mob));
+        transform: scale(var(--videoCard-focus-scale));
         z-index: 100;
         border: 0;
         opacity: 1;
       }
     }
 
-    /* slide when not active*/
-    .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
-      a {
-      }
-    }
-
     /* slide when active (when play last to first) */
     .slick-slide[aria-hidden="true"][tabindex="-1"] + .slick-center {
       a {
-        transform: scale(var(--videoCard-focus-scale-mob));
+        transform: scale(var(--videoCard-focus-scale));
         z-index: 100;
         border: 0;
         opacity: 1;
@@ -94,17 +80,25 @@ const Container = styled.ul`
     /* slide when active (when play first to last) */
     .slick-slide[data-index="-1"] .slick-center {
       a {
-          transform: scale(var(--videoCard-focus-scale-mob));
+          transform: scale(var(--videoCard-focus-scale));
           z-index: 100;
           border: 0;
           opacity: 1;
       }
     }
   }
-
   @media (max-width: 800px) {
     --height-mobile: calc(calc(var(--videoCard-container-height-mob) * var(--videoCard-focus-scale-mob)) * 1.02);
     height: var(--height-mobile);
+
+    .slick-current, .slick-slide[data-index="-1"] .slick-center, .slick-slide[aria-hidden="true"][tabindex="-1"] + .slick-center {
+      a {
+          transform: scale(var(--videoCard-focus-scale-mob));
+          z-index: 100;
+          border: 0;
+          opacity: 1;
+      }
+    }
 
     .slick-prev {
       left: 5px;
@@ -147,18 +141,8 @@ const Slider = ({ arrowColor, children }) => (
             breakpoint: 1200,
             settings: {
               centerMode: true,
-              slidesToShow: 3,
-              slidesToScroll: 2,
-              infinite: true,
-            },
-          },
-          {
-            breakpoint: 800,
-            settings: {
-              centerMode: true,
-              slidesToShow: 3,
-              slidesToScroll: 2,
-              infinite: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
             },
           },
         ],

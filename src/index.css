@@ -39,6 +39,20 @@ a {
   color: inherit;
 }
 
+.menu-ativo:before {
+  content: '';
+  display: block;
+  z-index: 100;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: rgba(0, 0, 0, 0.4);
+}
+
 #root {
   --bodyPaddingTop: 94px;
   display: flex;

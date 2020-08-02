@@ -43,12 +43,32 @@
     {
       "id": 5,
       "titulo": "Roguelike RPG",
-      "cor": "red",
+      "cor": "#ff0000",
       "descricao": "Best Roguelike Games on PC & Steam",
       "link_extra": {
         "text": "Best Roguelike Games on PC & Steam",
         "url": "https://www.ozarc.games/best-roguelike-games/"
       }
+    },
+    {
+      "titulo": "Games",
+      "descricao": "Produção de Jogos na Alura",
+      "link_extra": {
+        "text": "Produção de Jogos na Alura",
+        "url": ""
+      },
+      "cor": "#800080",
+      "id": 6
+    },
+    {
+      "titulo": "Animes",
+      "descricao": "Melhores Animes!",
+      "link_extra": {
+        "text": "Melhores Animes!",
+        "url": ""
+      },
+      "cor": "#b277da",
+      "id": 7
     }
   ],
   "videos": [
@@ -267,6 +287,36 @@
       "categoriaId": 6,
       "titulo": "Pokémon Let's Go Pikachu/Eevee",
       "url": "https://www.youtube.com/watch?v=L56q_k2ydrs"
+    },
+    {
+      "categoriaId": 2,
+      "titulo": "Top 15 PS4 Action-RPGs of All Time",
+      "url": "https://www.youtube.com/watch?v=YjUBppOyUR4",
+      "id": 37
+    },
+    {
+      "categoriaId": 7,
+      "titulo": "Overlord II",
+      "url": "https://www.youtube.com/watch?v=4DpKM9AG2n0",
+      "id": 38
+    },
+    {
+      "categoriaId": 7,
+      "titulo": "Steins;Gate",
+      "url": "https://www.youtube.com/watch?v=dd7BILZcYAY",
+      "id": 39
+    },
+    {
+      "categoriaId": 7,
+      "titulo": "Re:Zero kara Hajimeru Isekai Seikatsu",
+      "url": "https://www.youtube.com/watch?v=iu_0kOfMGD0",
+      "id": 40
+    },
+    {
+      "categoriaId": 7,
+      "titulo": "Fullmetal Alchemist: Brotherhood",
+      "url": "https://www.youtube.com/watch?v=cRA5gsdCf4c",
+      "id": 41
     }
   ]
 }

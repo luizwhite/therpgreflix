@@ -25,8 +25,13 @@ const Button = styled.button`
     opacity: 1;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1200px) {
     opacity: 1;
+  }
+
+  @media (max-width: 800px) {
+    display: none;
+    /* opacity: 1;
     position: fixed;
     left: 0;
     right: 0;
@@ -36,7 +41,7 @@ const Button = styled.button`
     border-radius: 0;
     border: 0;
 
-    text-align: center;
+    text-align: center; */
   }
 `;
 

@@ -23,7 +23,8 @@ export const FooterBase = styled.footer`
     height: 95px;
     padding-top: 15px;
     padding-bottom: 0;
-    margin-bottom: 50px;
+    margin-bottom: 0;
+    /* margin-bottom: 50px; */
     font-size: 10px;
   }
 `;
