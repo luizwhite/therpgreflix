@@ -141,7 +141,7 @@ const Slider = ({ arrowColor, children }) => (
             breakpoint: 1200,
             settings: {
               centerMode: true,
-              slidesToShow: 1,
+              slidesToShow: 3,
               slidesToScroll: 1,
             },
           },

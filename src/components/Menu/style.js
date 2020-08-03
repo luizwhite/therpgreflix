@@ -96,9 +96,8 @@ export const MenuLateral = styled.nav`
           right: -80%;
         `
       );
-      console.log('if1');
     }
-    console.log('if2');
+
     return css`
       right: -5%;
     `;

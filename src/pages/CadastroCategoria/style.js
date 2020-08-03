@@ -1,5 +1,39 @@
 import styled from 'styled-components';
 import { FormFieldWrapper } from '../../components/FormField/style';
+import { VideoDeleteInput } from '../CadastroVideo/style';
+
+export const CategorySelectInput = styled(VideoDeleteInput)`
+  width: 50vw;
+`;
+
+export const CategoryTitleEditInput = styled(CategorySelectInput)`
+`;
+
+export const ButtonShowCategoryEdit = styled.button`
+  display: flex;
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background-color: #281e15;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  align-items: center;
+  width: 24vw;
+  justify-content: center;
+  margin-bottom: 2rem;
+`;
+
+export const EditCategorySection = styled.div`
+  opacity: 1;
+  display: none;
+  flex-direction: column;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, rgba(0,0,0,.5), var(--primary) 5%, rgba(0,0,0,0)) 1;
+  margin-bottom: 2rem;
+`;
 
 export const ButtonForm = styled.button`
   width: 16rem;

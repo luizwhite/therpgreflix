@@ -1,4 +1,4 @@
-import React from 'react';
+import React /* , { useEffect } */ from 'react';
 import PropTypes from 'prop-types';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem /* , SliderMobile */ } from './components/Slider';
@@ -9,6 +9,7 @@ function VideoCardGroup({ ignoreFirstVideo, category }) {
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
   const { videos } = category;
+  const videosLength = videos.length;
 
   /* checklater */
   return (
@@ -52,7 +53,19 @@ VideoCardGroup.defaultProps = {
 
 VideoCardGroup.propTypes = {
   ignoreFirstVideo: PropTypes.bool,
-  category: PropTypes.arrayOf(PropTypes.object).isRequired,
+  category: PropTypes.PropTypes.shape({
+    cor: PropTypes.string,
+    descricao: PropTypes.string,
+    id: PropTypes.number,
+    link_extra: PropTypes.objectOf(PropTypes.string),
+    titulo: PropTypes.string,
+    videos: PropTypes.arrayOf(PropTypes.shape({
+      categoriaId: PropTypes.number,
+      id: PropTypes.number,
+      titulo: PropTypes.string,
+      url: PropTypes.string,
+    })),
+  }).isRequired,
 };
 
 export default VideoCardGroup;

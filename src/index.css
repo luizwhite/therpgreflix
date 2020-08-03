@@ -53,6 +53,14 @@ a {
   background: rgba(0, 0, 0, 0.4);
 }
 
+.hidden {
+  display: none !important;
+}
+
+.show-flex {
+  display: flex !important;
+}
+
 #root {
   --bodyPaddingTop: 94px;
   display: flex;

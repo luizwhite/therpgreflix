@@ -8,11 +8,15 @@ import PageDefault from '../../components/PageDefault';
 import useForm from '../../hooks/useForm';
 import videosRepository from '../../repositories/videos';
 import categsRepository from '../../repositories/categorias';
+import { VideoDeleteInput, StyledLink, ContainerTop } from './style';
 
 function CadastroVideo() {
   const [categorias, setCategorias] = useState([]);
+  const [videos, setVideos] = useState([]);
+  const [videoToDelete, setVideoToDelete] = useState('');
   const history = useHistory();
   const categoryTitles = categorias.map(({ titulo }) => titulo);
+  const videoTitles = videos.map(({ titulo }) => titulo);
   const { handleChange, values } = useForm({
     id: '',
     categoriaId: '',
@@ -27,8 +31,36 @@ function CadastroVideo() {
       .then((categs) => {
         setCategorias(categs);
       });
+    videosRepository
+      .getAll()
+      .then((allVideos) => {
+        setVideos(allVideos);
+      });
     // eslint-disable-next-line
   }, []);
+
+  function handleDelete(e) {
+    e.preventDefault();
+
+    const videoEscolhido = videos.find(
+      // eslint-disable-next-line
+      (video) => (video.titulo === videoToDelete)
+    );
+    const { id } = videoEscolhido;
+
+    if (id === 0) {
+      return;
+    }
+
+    videosRepository.deleteVideo(id)
+      .then(() => {
+        history.push('/');
+      });
+  }
+
+  function handleVideoToDelete(e) {
+    setVideoToDelete(e.target.value);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -52,17 +84,75 @@ function CadastroVideo() {
 
   return (
     <PageDefault>
-      <Link to="/cadastro/categoria" style={{
-        textDecoration: 'none',
-        padding: '1rem',
-        border: '1px solid var(--primary)',
-        borderRadius: '4px',
-      }}>
-        Cadastrar Categoria
-      </Link>
+      <ContainerTop>
+        <StyledLink
+          to="/cadastro/categoria"
+        >
+          Cadastrar Categoria
+        </StyledLink>
+        <div
+          style={{
+            display: 'flex',
+            padding: '20px 0 14px 0',
+            borderTop: '1px solid',
+            borderBottom: '1px solid',
+            position: 'relative',
+            borderImage: 'linear-gradient(to right, rgba(0,0,0,.5), var(--primary) 10%, rgba(0,0,0,0)) 1',
+          }}
+        >
+          <span
+            style={{
+              position: 'absolute',
+              top: 'calc(-1rem - 6px)',
+              transform: 'translateY(25%)',
+              paddingRight: '5px',
+              backgroundColor: 'var(--grayDark)',
+              fontSize: '18px',
+              fontWeight: 'bold',
+            }}
+          >
+            Apagar um Vídeo
+          </span>
+          <VideoDeleteInput
+            type="text"
+            id="deleteVideoField"
+            value={videoToDelete}
+            placeholder="Título do Vídeo"
+            onChange={handleVideoToDelete}
+            autoComplete="off"
+            list="suggestionsFor_deleteVideoField"
+          />
+          <datalist id="suggestionsFor_deleteVideoField">
+            {
+              videoTitles.map((suggestion) => (
+                <option value={suggestion} key={`suggestionsFor_deleteVideoField__option_${suggestion}`}>
+                  {suggestion}
+                </option>
+              ))
+            }
+          </datalist>
+          <button
+            type="button"
+            onClick={handleDelete}
+            style={{
+              textDecoration: 'none',
+              padding: '1rem',
+              border: '1px solid #ff0000',
+              borderRadius: '4px',
+              backgroundColor: '#201313',
+              color: 'white',
+              fontSize: '1rem',
+              cursor: 'pointer',
+            }}
+          >
+            Apagar Vídeo
+          </button>
+        </div>
+      </ContainerTop>
       <TitleH1 style={{
-        marginTop: '4rem',
-      }}>
+        marginTop: '3rem',
+      }}
+      >
         Cadastro de Vídeo:&nbsp;
         {values.titulo}
       </TitleH1>
