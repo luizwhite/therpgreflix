@@ -1,16 +1,28 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { InputContainer, CategorySelectInput } from '../CadastroCategoria/style';
 
 export const ContainerTop = styled.div`
-  height: auto;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
+  min-height: 240px;
 
   @media (max-width: 800px) {
-    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+  }
+`;
+
+export const InputContainerDeleteVideo = styled(InputContainer)`
+  width: 100%;
+  padding: 20px 0 14px 0;
+  border-bottom: 1px solid;
+  margin-left: 0;
+
+  @media (max-width: 800px) {
+    justify-content: space-between;
   }
 `;
 
@@ -26,27 +38,24 @@ export const StyledLink = styled(Link)`
   }
 `;
 
-export const VideoDeleteInput = styled.input`
-  width: 40vw;
-  min-height: 100%;
-  padding: .5rem;
-  margin-right: 1rem;
+export const VideoDeleteInput = styled(CategorySelectInput)`
+  width: 50%;
+  margin-bottom: 0;
+  margin-right: 2rem;
 
-  background-color: #484d51;
-
-  border: 0;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-radius: 6px;
-  /* box-shadow: 0 0 2px 2px rgb(115, 115, 115, 0.7); */
-
-  color: var(--grayLight);
-
-  resize: none;
-  font-size: 1rem;
-  outline: none;
-
-  &:focus {
-    border-bottom-color: var(--primary);
+  @media (max-width: 800px) {
+    margin-right: 1rem;
+    width: 60%;
   }
+`;
+
+export const ButtonDeleteVideo = styled.button`
+  text-decoration: none;
+  padding: 1rem;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+  background-color: #201313;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 `;

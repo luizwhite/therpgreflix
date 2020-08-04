@@ -61,11 +61,10 @@
       "id": 6
     },
     {
-      "titulo": "Animes",
-      "descricao": "Melhores Animes!",
+      "titulo": "AnimesTop",
+      "descricao": "Melhores Animes de Todos os Tempos!",
       "link_extra": {
-        "text": "Melhores Animes!",
-        "url": ""
+        "text": "Melhores Animes!"
       },
       "cor": "#b277da",
       "id": 7

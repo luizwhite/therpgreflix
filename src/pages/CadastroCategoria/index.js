@@ -10,10 +10,14 @@ import {
   HrBreak,
   BottomContainer,
   ButtonForm,
+  InputContainer,
   CategorySelectInput,
   CategoryTitleEditInput,
-  ButtonShowCategoryEdit,
   EditCategorySection,
+  DivButtons,
+  ButtonShowCategoryEdit,
+  ButtonModifyCategoryTitle,
+  ButtonDeleteCategory,
 } from './style';
 import useForm from '../../hooks/useForm';
 import categsRepository from '../../repositories/categorias';
@@ -33,6 +37,7 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
   const [categoryToEdit, setCategoryToEdit] = useState('');
   const [categoryTitleNewValueToEdit, setCategoryTitleNewValueToEdit] = useState('');
+  const [categorySubtitleNewValueToEdit, setCategorySubtitleNewValueToEdit] = useState('');
   const categoryTitles = categorias.map(({ titulo }) => titulo);
   const { handleChange, values, clearValues } = useForm(valoresIniciais);
 
@@ -53,6 +58,10 @@ function CadastroCategoria() {
     setCategoryTitleNewValueToEdit(e.target.value);
   }
 
+  function handleCategorySubtitleNewValueToEdit(e) {
+    setCategorySubtitleNewValueToEdit(e.target.value);
+  }
+
   function handleCategoryTitleEdit(e) {
     e.preventDefault();
 
@@ -64,6 +73,10 @@ function CadastroCategoria() {
 
     categsRepository.edit({
       titulo: categoryTitleNewValueToEdit,
+      descricao: categorySubtitleNewValueToEdit,
+      link_extra: {
+        text: categorySubtitleNewValueToEdit,
+      },
     }, id)
       .then(() => {
         history.push('/');
@@ -115,28 +128,6 @@ function CadastroCategoria() {
 
   return (
     <PageDefault>
-
-      {/*
-      <div
-        style={{
-          height: 'auto',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Link
-          to="/cadastro/categoria"
-          style={{
-            textDecoration: 'none',
-            padding: '1rem',
-            border: '1px solid var(--primary)',
-            borderRadius: '4px',
-          }}
-        >
-          Cadastrar Categoria
-        </Link>
-      */}
       <ButtonShowCategoryEdit
         id="editCategoryShowButton"
         type="button"
@@ -168,16 +159,7 @@ function CadastroCategoria() {
             Edite uma Categoria
           </span>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            position: 'relative',
-            borderTop: '1px solid',
-            borderImage: 'linear-gradient(to right, rgba(0,0,0,.5), var(--primary) 10%, rgba(0,0,0,0)  50vw) 1',
-            margin: '0 0 2rem 2rem',
-            paddingTop: '.5rem',
-          }}
-        >
+        <InputContainer>
           <span
             style={{
               position: 'absolute',
@@ -207,17 +189,8 @@ function CadastroCategoria() {
               ))
             }
           </datalist>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            paddingTop: '.5rem',
-            borderTop: '1px solid',
-            position: 'relative',
-            borderImage: 'linear-gradient(to right, rgba(0,0,0,.5), var(--primary) 10%, rgba(0,0,0,0) 50vw) 1',
-            margin: '0 0 2rem 2rem',
-          }}
-        >
+        </InputContainer>
+        <InputContainer>
           <span
             style={{
               position: 'absolute',
@@ -236,60 +209,42 @@ function CadastroCategoria() {
             onChange={handleCategoryTitleNewValueToEdit}
             autoComplete="off"
           />
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            marginLeft: '2rem',
-            justifyContent: 'space-between',
-            width: '50vw',
-            marginBottom: '2rem',
-          }}
-        >
-          <button
-            type="button"
-            onClick={handleCategoryTitleEdit}
+        </InputContainer>
+        <InputContainer>
+          <span
             style={{
-              textDecoration: 'none',
-              padding: '1rem',
-              border: '1px solid var(--primary)',
-              borderRadius: '4px',
-              backgroundColor: '#281e15',
-              color: 'white',
-              fontSize: '1.2rem',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              width: '24vw',
-              justifyContent: 'center',
+              position: 'absolute',
+              transform: 'translateY(-120%)',
+              paddingRight: '5px',
+              backgroundColor: 'var(--grayDark)',
+              fontSize: '16px',
             }}
           >
-            Modificar Título
-          </button>
-          <button
+            Novo Subtítulo da Categoria
+          </span>
+          <CategoryTitleEditInput
+            type="text"
+            value={categorySubtitleNewValueToEdit}
+            placeholder="Novo Título da Categoria"
+            onChange={handleCategorySubtitleNewValueToEdit}
+            autoComplete="off"
+          />
+        </InputContainer>
+        <DivButtons>
+          <ButtonModifyCategoryTitle
+            type="button"
+            onClick={handleCategoryTitleEdit}
+          >
+            Modificar Categoria
+          </ButtonModifyCategoryTitle>
+          <ButtonDeleteCategory
             type="button"
             onClick={handleDelete}
-            style={{
-              textDecoration: 'none',
-              padding: '1rem',
-              border: '1px solid #ff0000',
-              borderRadius: '4px',
-              backgroundColor: '#201313',
-              color: 'white',
-              fontSize: '1rem',
-              cursor: 'pointer',
-              alignSelf: 'flex-start',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              width: '24vw',
-              justifyContent: 'center',
-            }}
           >
             <span style={{ fontWeight: 'bold' }}>Apague</span>
             &nbsp;a Categoria selecionada
-          </button>
-        </div>
+          </ButtonDeleteCategory>
+        </DivButtons>
       </EditCategorySection>
       {/*
       </div>

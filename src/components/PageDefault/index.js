@@ -10,6 +10,10 @@ const Main = styled.main`
   padding-right: 5%;
   color: var(--white);
   /* background-color: var(--grayDark); */
+
+  @media (max-width: 800px) {
+    padding-top: 20px;
+  }
 `;
 
 function PageDefault({ children }) {

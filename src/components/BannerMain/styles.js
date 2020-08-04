@@ -104,7 +104,7 @@ export const BannerMainContainer = styled.section`
   color: #fff;
 
   @media (max-width: 800px) {
-    height: calc(100vh - var(----MenuPaddingTopMobile));
+    height: calc(100vh - var(--MenuPaddingTopMobile));
   }
 
   &:after,

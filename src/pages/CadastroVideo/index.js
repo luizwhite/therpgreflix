@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { /* Link, */ useHistory } from 'react-router-dom';
 import FormField from '../../components/FormField';
 import {
   TitleH1, Container, Form, HrBreak, BottomContainer, ButtonForm,
@@ -8,7 +8,13 @@ import PageDefault from '../../components/PageDefault';
 import useForm from '../../hooks/useForm';
 import videosRepository from '../../repositories/videos';
 import categsRepository from '../../repositories/categorias';
-import { VideoDeleteInput, StyledLink, ContainerTop } from './style';
+import {
+  StyledLink,
+  ContainerTop,
+  InputContainerDeleteVideo,
+  VideoDeleteInput,
+  ButtonDeleteVideo,
+} from './style';
 
 function CadastroVideo() {
   const [categorias, setCategorias] = useState([]);
@@ -90,16 +96,7 @@ function CadastroVideo() {
         >
           Cadastrar Categoria
         </StyledLink>
-        <div
-          style={{
-            display: 'flex',
-            padding: '20px 0 14px 0',
-            borderTop: '1px solid',
-            borderBottom: '1px solid',
-            position: 'relative',
-            borderImage: 'linear-gradient(to right, rgba(0,0,0,.5), var(--primary) 10%, rgba(0,0,0,0)) 1',
-          }}
-        >
+        <InputContainerDeleteVideo>
           <span
             style={{
               position: 'absolute',
@@ -131,28 +128,15 @@ function CadastroVideo() {
               ))
             }
           </datalist>
-          <button
+          <ButtonDeleteVideo
             type="button"
             onClick={handleDelete}
-            style={{
-              textDecoration: 'none',
-              padding: '1rem',
-              border: '1px solid #ff0000',
-              borderRadius: '4px',
-              backgroundColor: '#201313',
-              color: 'white',
-              fontSize: '1rem',
-              cursor: 'pointer',
-            }}
           >
             Apagar Vídeo
-          </button>
-        </div>
+          </ButtonDeleteVideo>
+        </InputContainerDeleteVideo>
       </ContainerTop>
-      <TitleH1 style={{
-        marginTop: '3rem',
-      }}
-      >
+      <TitleH1>
         Cadastro de Vídeo:&nbsp;
         {values.titulo}
       </TitleH1>
