@@ -78,8 +78,6 @@ function deleteCateg(id) {
     headers: {
       'Content-type': 'application/json',
     },
-    // body: JSON.stringify(objetoDaCategoria),
-    // method: 'DELETE',
   })
     .then(async (firstResponse) => {
       if (firstResponse.ok) {

@@ -5,6 +5,14 @@ import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import PageHome from './style';
 
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
+
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
 
@@ -20,35 +28,38 @@ function Home() {
   }, []);
 
   return (
-    <PageHome>
-      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
+    <>
+      <ScrollToTopOnMount />
+      <PageHome>
+        {dadosIniciais.length === 0 && (<div>Loading...</div>)}
 
-      {dadosIniciais.map((categoria, index) => {
-        if (index === 0) {
+        {dadosIniciais.map((categoria, index) => {
+          if (index === 0) {
+            return (
+              <div key={categoria.id}>
+                <BannerMain
+                  videoTitle={dadosIniciais[0].videos[0].titulo}
+                  url={dadosIniciais[0].videos[0].url}
+                  videoDescription={
+                    'In-Game environment surrounding the metropolis from the "Art of War" trailer.'
+                  }
+                />
+                <Carousel ignoreFirstVideo category={dadosIniciais[0]} />
+              </div>
+            );
+          }
+
           return (
-            <div key={categoria.id}>
-              <BannerMain
-                videoTitle={dadosIniciais[0].videos[0].titulo}
-                url={dadosIniciais[0].videos[0].url}
-                videoDescription={
-                  'In-Game environment surrounding the metropolis from the "Art of War" trailer.'
-                }
+            <>
+              <Carousel
+                key={categoria.id}
+                category={categoria}
               />
-              <Carousel ignoreFirstVideo category={dadosIniciais[0]} />
-            </div>
+            </>
           );
-        }
-
-        return (
-          <>
-            <Carousel
-              key={categoria.id}
-              category={categoria}
-            />
-          </>
-        );
-      })}
-    </PageHome>
+        })}
+      </PageHome>
+    </>
   );
 }
 

@@ -16,6 +16,14 @@ import {
   ButtonDeleteVideo,
 } from './style';
 
+function ScrollToTopOnMount() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return null;
+}
+
 function CadastroVideo() {
   const [categorias, setCategorias] = useState([]);
   const [videos, setVideos] = useState([]);
@@ -89,105 +97,108 @@ function CadastroVideo() {
   }
 
   return (
-    <PageDefault>
-      <ContainerTop>
-        <StyledLink
-          to="/cadastro/categoria"
-        >
-          Cadastrar Categoria
-        </StyledLink>
-        <InputContainerDeleteVideo>
-          <span
-            style={{
-              position: 'absolute',
-              top: 'calc(-1rem - 6px)',
-              transform: 'translateY(25%)',
-              paddingRight: '5px',
-              backgroundColor: 'var(--grayDark)',
-              fontSize: '18px',
-              fontWeight: 'bold',
-            }}
+    <>
+      <ScrollToTopOnMount />
+      <PageDefault>
+        <ContainerTop>
+          <StyledLink
+            to="/cadastro/categoria"
           >
-            Apagar um Vídeo
-          </span>
-          <VideoDeleteInput
-            type="text"
-            id="deleteVideoField"
-            value={videoToDelete}
-            placeholder="Título do Vídeo"
-            onChange={handleVideoToDelete}
-            autoComplete="off"
-            list="suggestionsFor_deleteVideoField"
-          />
-          <datalist id="suggestionsFor_deleteVideoField">
-            {
-              videoTitles.map((suggestion) => (
-                <option value={suggestion} key={`suggestionsFor_deleteVideoField__option_${suggestion}`}>
-                  {suggestion}
-                </option>
-              ))
-            }
-          </datalist>
-          <ButtonDeleteVideo
-            type="button"
-            onClick={handleDelete}
-          >
-            Apagar Vídeo
-          </ButtonDeleteVideo>
-        </InputContainerDeleteVideo>
-      </ContainerTop>
-      <TitleH1>
-        Cadastro de Vídeo:&nbsp;
-        {values.titulo}
-      </TitleH1>
+            Cadastrar Categoria
+          </StyledLink>
+          <InputContainerDeleteVideo>
+            <span
+              style={{
+                position: 'absolute',
+                top: 'calc(-1rem - 6px)',
+                transform: 'translateY(25%)',
+                paddingRight: '5px',
+                backgroundColor: 'var(--grayDark)',
+                fontSize: '18px',
+                fontWeight: 'bold',
+              }}
+            >
+              Apagar um Vídeo
+            </span>
+            <VideoDeleteInput
+              type="text"
+              id="deleteVideoField"
+              value={videoToDelete}
+              placeholder="Título do Vídeo"
+              onChange={handleVideoToDelete}
+              autoComplete="off"
+              list="suggestionsFor_deleteVideoField"
+            />
+            <datalist id="suggestionsFor_deleteVideoField">
+              {
+                videoTitles.map((suggestion) => (
+                  <option value={suggestion} key={`suggestionsFor_deleteVideoField__option_${suggestion}`}>
+                    {suggestion}
+                  </option>
+                ))
+              }
+            </datalist>
+            <ButtonDeleteVideo
+              type="button"
+              onClick={handleDelete}
+            >
+              Apagar Vídeo
+            </ButtonDeleteVideo>
+          </InputContainerDeleteVideo>
+        </ContainerTop>
+        <TitleH1>
+          Cadastro de Vídeo:&nbsp;
+          {values.titulo}
+        </TitleH1>
 
-      <Container>
-        <Form onSubmit={handleSubmit}>
-          <FormField
-            label="Título do Vídeo: "
-            name="titulo"
-            value={values.titulo}
-            type="text"
-            placeholder="Nomeie seu novo vídeo"
-            onChange={handleChange}
-          />
-          <FormField
-            label="URL: "
-            name="url"
-            value={values.url}
-            type="text"
-            placeholder="Digite a URL do vídeo"
-            onChange={handleChange}
-          />
-          <FormField
-            label="Categoria: "
-            name="categoria"
-            value={values.categoria}
-            type="text"
-            placeholder="Qual é a categoria do vídeo?"
-            onChange={handleChange}
-            suggestions={categoryTitles}
-          />
-          {/*
-          <br />
-          <FormField
-            label="Descrição: "
-            name="descricao"
-            type="textarea"
-            value={values.descricao}
-            placeholder="Descreva sobre sua categoria"
-            onChange={handleChange}
-          />
-          */}
-          <br />
-          <br />
-          <BottomContainer style={{ justifyContent: 'flex-end' }}>
-            <ButtonForm>Cadastrar Vídeo</ButtonForm>
-          </BottomContainer>
-          <HrBreak />
-        </Form>
-      </Container>
-    </PageDefault>
+        <Container>
+          <Form onSubmit={handleSubmit}>
+            <FormField
+              label="Título do Vídeo: "
+              name="titulo"
+              value={values.titulo}
+              type="text"
+              placeholder="Nomeie seu novo vídeo"
+              onChange={handleChange}
+            />
+            <FormField
+              label="URL: "
+              name="url"
+              value={values.url}
+              type="text"
+              placeholder="Digite a URL do vídeo"
+              onChange={handleChange}
+            />
+            <FormField
+              label="Categoria: "
+              name="categoria"
+              value={values.categoria}
+              type="text"
+              placeholder="Qual é a categoria do vídeo?"
+              onChange={handleChange}
+              suggestions={categoryTitles}
+            />
+            {/*
+            <br />
+            <FormField
+              label="Descrição: "
+              name="descricao"
+              type="textarea"
+              value={values.descricao}
+              placeholder="Descreva sobre sua categoria"
+              onChange={handleChange}
+            />
+            */}
+            <br />
+            <br />
+            <BottomContainer style={{ justifyContent: 'flex-end' }}>
+              <ButtonForm>Cadastrar Vídeo</ButtonForm>
+            </BottomContainer>
+            <HrBreak />
+          </Form>
+        </Container>
+      </PageDefault>
+    </>
   );
 }
 

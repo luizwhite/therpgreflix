@@ -9,7 +9,6 @@ function VideoCardGroup({ ignoreFirstVideo, category }) {
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
   const { videos } = category;
-  const videosLength = videos.length;
 
   /* checklater */
   return (
