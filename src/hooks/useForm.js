@@ -21,6 +21,7 @@ function useForm(valoresIniciais) {
       });
     // eslint-disable-next-line
   }, []);
+
   const categoryTitles = categorias.map(({ titulo }) => titulo);
 
   function setValue(chave, valor) {
@@ -195,6 +196,14 @@ function useForm(valoresIniciais) {
         history.push('/');
       });
   }
+
+  useEffect(() => {
+    console.log('Alguém mexeu nos editcategoryvalues', values);
+    validateCategoryEdit({
+      titulo: categoryTitleNewValueToEdit,
+      descricao: categorySubtitleNewValueToEdit,
+    });
+  }, [categoryTitleNewValueToEdit, categorySubtitleNewValueToEdit]);
 
   return {
     values,

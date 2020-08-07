@@ -61,13 +61,23 @@
       "id": 6
     },
     {
-      "titulo": "Animes",
-      "descricao": "Melhores Animes",
+      "titulo": "Categoria Nova",
+      "descricao": "Novo Subtítulo",
       "link_extra": {
-        "text": "Melhores Animes"
+        "text": "Novo Subtítulo"
       },
       "cor": "#b277da",
       "id": 7
+    },
+    {
+      "titulo": "Outra Categorai",
+      "descricao": "Outro subtítulo",
+      "link_extra": {
+        "text": "Outro subtítulo",
+        "url": ""
+      },
+      "cor": "#f0f0f0",
+      "id": 8
     }
   ],
   "videos": [

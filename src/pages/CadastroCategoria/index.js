@@ -42,23 +42,24 @@ function CadastroCategoria() {
     cor: '#f0f0f0',
   };
   const [categorias, setCategorias] = useState([]);
-  const {
-    handleChange,
-    categoryToEdit,
-    categoryTitles,
-    categoryTitleNewValueToEdit,
-    categorySubtitleNewValueToEdit,
-    handleCategoryDelete,
-    handleCategoryToEdit,
-    handleCategoryTitleNewValueToEdit,
-    handleCategorySubtitleNewValueToEdit,
-    handleCategoryTitleEdit,
-    values,
-    validate,
-    clearValues,
-    errorsMessages,
-    categoryEditErrorsMessages,
-  } = useForm(valoresIniciais);
+  // const {
+  //   handleChange,
+  //   categoryToEdit,
+  //   categoryTitles,
+  //   categoryTitleNewValueToEdit,
+  //   categorySubtitleNewValueToEdit,
+  //   handleCategoryDelete,
+  //   handleCategoryToEdit,
+  //   handleCategoryTitleNewValueToEdit,
+  //   handleCategorySubtitleNewValueToEdit,
+  //   handleCategoryTitleEdit,
+  //   values,
+  //   validate,
+  //   clearValues,
+  //   errorsMessages,
+  //   categoryEditErrorsMessages,
+  // } = useForm(valoresIniciais);
+  const myForm = useForm(valoresIniciais);
 
   useEffect(() => {
     categsRepository
@@ -68,6 +69,10 @@ function CadastroCategoria() {
       });
     // eslint-disable-next-line
   }, []);
+  useEffect(() => {
+    console.log('Alguém mexeu nos values', myForm.values);
+    myForm.validate(myForm.values);
+  }, [myForm.values]);
 
   function showCategoryEdit() {
     document.getElementById('editCategoryShowButton').classList.add('hidden');
@@ -78,23 +83,23 @@ function CadastroCategoria() {
     e.preventDefault();
     // clearErrors();
 
-    const isValid = validate(values);
+    const isValid = myForm.validate(myForm.values);
     if (!isValid) return;
 
     categsRepository.create({
-      titulo: values.titulo,
-      descricao: values.descricao,
+      titulo: myForm.values.titulo,
+      descricao: myForm.values.descricao,
       link_extra: {
-        text: values.descricao,
+        text: myForm.values.descricao,
         url: '',
       },
-      cor: values.cor,
+      cor: myForm.values.cor,
     })
       .then(() => {
         history.push('/cadastro/categoria');
       });
-    setCategorias([...categorias, values]);
-    clearValues();
+    setCategorias([...categorias, myForm.values]);
+    myForm.clearValues();
   }
 
   return (
@@ -132,10 +137,31 @@ function CadastroCategoria() {
               Edite uma Categoria
             </span>
           </div>
-          <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{categoryEditErrorsMessages.titulo}</span>
-          <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{categoryEditErrorsMessages.descricao}</span>
-          <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{categoryEditErrorsMessages.cor}</span>
-          <span style={{ color: 'red', fontSize: '16px', display: 'block', marginBottom: '3rem' }}>{categoryEditErrorsMessages.end}</span>
+          {myForm.categoryTitleNewValueToEdit && <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{myForm.categoryEditErrorsMessages.titulo}</span>}
+          {myForm.categorySubtitleNewValueToEdit && <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{myForm.categoryEditErrorsMessages.descricao}</span>}
+          <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{myForm.categoryEditErrorsMessages.cor}</span>
+          {(myForm.categoryTitleNewValueToEdit
+            || myForm.categorySubtitleNewValueToEdit) ? (
+              <span
+                style={{
+                  color: 'red',
+                  fontSize: '16px',
+                  display: 'block',
+                  marginBottom: '3rem',
+                }}
+              >
+                {myForm.categoryEditErrorsMessages.end}
+              </span>
+            ) : (
+              <span
+                style={{
+                  color: 'red',
+                  fontSize: '16px',
+                  display: 'block',
+                  marginBottom: '3rem',
+                }}
+              />
+            )}
           <InputContainer>
             <span
               style={{
@@ -151,15 +177,15 @@ function CadastroCategoria() {
             <CategorySelectInput
               type="text"
               id="editCategoryField"
-              value={categoryToEdit}
+              value={myForm.categoryToEdit}
               placeholder="Título da Categoria"
-              onChange={handleCategoryToEdit}
+              onChange={myForm.handleCategoryToEdit}
               autoComplete="off"
               list="suggestionsFor_editCategoryField"
             />
             <datalist id="suggestionsFor_editCategoryField">
               {
-                categoryTitles.map((suggestion) => (
+                myForm.categoryTitles.map((suggestion) => (
                   <option value={suggestion} key={`suggestionsFor_editCategoryField__option_${suggestion}`}>
                     {suggestion}
                   </option>
@@ -181,9 +207,9 @@ function CadastroCategoria() {
             </span>
             <CategoryTitleEditInput
               type="text"
-              value={categoryTitleNewValueToEdit}
+              value={myForm.categoryTitleNewValueToEdit}
               placeholder="Novo Título da Categoria"
-              onChange={handleCategoryTitleNewValueToEdit}
+              onChange={myForm.handleCategoryTitleNewValueToEdit}
               autoComplete="off"
             />
           </InputContainer>
@@ -201,22 +227,22 @@ function CadastroCategoria() {
             </span>
             <CategoryTitleEditInput
               type="text"
-              value={categorySubtitleNewValueToEdit}
+              value={myForm.categorySubtitleNewValueToEdit}
               placeholder="Novo Título da Categoria"
-              onChange={handleCategorySubtitleNewValueToEdit}
+              onChange={myForm.handleCategorySubtitleNewValueToEdit}
               autoComplete="off"
             />
           </InputContainer>
           <DivButtons>
             <ButtonModifyCategoryTitle
               type="button"
-              onClick={handleCategoryTitleEdit}
+              onClick={myForm.handleCategoryTitleEdit}
             >
               Modificar Categoria
             </ButtonModifyCategoryTitle>
             <ButtonDeleteCategory
               type="button"
-              onClick={handleCategoryDelete}
+              onClick={myForm.handleCategoryDelete}
             >
               <span style={{ fontWeight: 'bold' }}>Apague</span>
               &nbsp;a Categoria selecionada
@@ -226,31 +252,31 @@ function CadastroCategoria() {
 
         <TitleH1>
           Cadastro de Categoria:&nbsp;
-          {values.titulo}
+          {myForm.values.titulo}
         </TitleH1>
-        <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{errorsMessages.titulo}</span>
-        <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{errorsMessages.descricao}</span>
-        <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{errorsMessages.cor}</span>
-        <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{errorsMessages.end}</span>
+        {myForm.values.titulo && <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{myForm.errorsMessages.titulo}</span>}
+        {myForm.values.descricao && <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{myForm.errorsMessages.descricao}</span>}
+        {myForm.values.cor && <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{myForm.errorsMessages.cor}</span>}
+        {(myForm.values.titulo || myForm.values.descricao) && <span style={{ color: 'red', fontSize: '16px', display: 'block' }}>{myForm.errorsMessages.end}</span>}
 
         <Container>
           <Form onSubmit={handleSubmit}>
             <FormField
               label="Título da Categoria: "
               name="titulo"
-              value={values.titulo}
+              value={myForm.values.titulo}
               type="text"
               placeholder="Nomeie a nova categoria"
-              onChange={handleChange}
+              onChange={myForm.handleChange}
             />
             <br />
             <FormField
               label="Subtítulo: "
               name="descricao"
               type="textarea"
-              value={values.descricao}
+              value={myForm.values.descricao}
               placeholder="Dê um subtítulo para sua categoria"
-              onChange={handleChange}
+              onChange={myForm.handleChange}
             />
             <br />
             <br />
@@ -258,10 +284,10 @@ function CadastroCategoria() {
               <FormField
                 label="Cor: "
                 name="cor"
-                value={values.cor}
+                value={myForm.values.cor}
                 type="color"
                 placeholder=""
-                onChange={handleChange}
+                onChange={myForm.handleChange}
               />
               <ButtonForm>Cadastrar Categoria</ButtonForm>
             </BottomContainer>
